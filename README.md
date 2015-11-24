@@ -1,6 +1,6 @@
 
-This website is build upon the simple yet beautiful Jekyll theme called Long Haul. Credits go to the original author. 
-####[View Demo](http://brianmaierjr.com/long-haul)
+This website is build upon the simple yet beautiful Jekyll theme called Long Haul. Credits go to the original author. Please follow the instructions below if you are interested in using the theme.
+<!---####[View Demo](http://brianmaierjr.com/long-haul)--->
 ## Setup
 
 1. [Install Jekyll](http://jekyllrb.com)
