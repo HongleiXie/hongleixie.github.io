@@ -6,7 +6,9 @@ title: About Honglei
 <div class="post">
 	<h1 class="pageTitle">About Me</h1>
 	<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt=""> 
-	<p class="intro">I'm still thinking about how to introduce myself. By the way, the website theme is a <a href="http://jekyllrb.com">Jekyll</a> Theme.</p>
+	<p class="intro">I'm still thinking about how to introduce myself. 
+	<!---By the way, the website theme is a <a href="http://jekyllrb.com">Jekyll</a> Theme.--->
+	</p>
 
 	<!---
 	<h2>Features</h2>
