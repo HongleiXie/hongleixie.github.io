@@ -16,6 +16,14 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
+----------
+Just to test the R code as follows:
+```r
+> library(pryr)
+> x <- 1:10
+> c(address(x), refs(x))
+> [1] "0x103100060" "1"
+```
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
 
 [jekyll-gh]: https://github.com/mojombo/jekyll
