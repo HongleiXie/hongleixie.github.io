@@ -24,6 +24,23 @@ Just to test the R code as follows:
 > c(address(x), refs(x))
 > [1] "0x103100060" "1"
 ```
+----------
+Test Python code:
+Two ways to format strings in Python.
+**Use Format **
+```python
+my_name = 'Michael';
+print ("Hello, my name is {name}".format(name=my_name));
+
+"Hello, my name is Michael"
+```
+**Use  ```%``` in older version of Python**
+```python
+name = "Mike";
+print "Hello %s" % (name);
+
+Hello Mike
+```
 
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
 
