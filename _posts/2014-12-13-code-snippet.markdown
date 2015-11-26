@@ -13,17 +13,10 @@ def print_hi(name)
   puts "Hi, #{name}"
 end
 print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
 ----------
 Just to test the R code as follows:
-{% highlight R %}
-library(pryr)
-x <- 1:10
-c(address(x), refs(x))
-[1] "0x103100060" "1"
-{% endhighlight %}
 
 ```r
 > library(pryr)
