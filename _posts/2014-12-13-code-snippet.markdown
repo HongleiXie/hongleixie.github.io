@@ -27,6 +27,7 @@ Just to test the R code as follows:
 ----------
 Test Python code:
 Two ways to format strings in Python.
+
 **Use Format**
 
 {% highlight python %}
