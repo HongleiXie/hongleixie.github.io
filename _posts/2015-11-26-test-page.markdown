@@ -8,7 +8,7 @@ date:   2015-11-26
 
 <!---    <img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt="">   --->
 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<!---<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> --->
 
 ### Math
 The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
