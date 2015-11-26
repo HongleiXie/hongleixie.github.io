@@ -27,14 +27,14 @@ Just to test the R code as follows:
 ----------
 Test Python code:
 Two ways to format strings in Python.
-**Use Format **
+*Use Format*
 ```python
 my_name = 'Michael';
 print ("Hello, my name is {name}".format(name=my_name));
 
 "Hello, my name is Michael"
 ```
-**Use  ```%``` in older version of Python**
+*Use  ```%``` in older version of Python*
 ```python
 name = "Mike";
 print "Hello %s" % (name);
