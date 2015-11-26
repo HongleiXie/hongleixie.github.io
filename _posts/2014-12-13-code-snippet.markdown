@@ -4,7 +4,7 @@ title:  "Post With A Code Snippet"
 date:   2014-12-13
 ---
 
-<p class="intro"><span class="dropcap">Y</span>ou'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes! To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.</p>
+Y</span>ou'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes! To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
 
 Jekyll also offers powerful support for code snippets:
 
@@ -19,12 +19,18 @@ print_hi('Tom')
 ----------
 Just to test the R code as follows:
 {% highlight R %}
+library(pryr)
+x <- 1:10
+c(address(x), refs(x))
+[1] "0x103100060" "1"
+{% endhighlight %}
+
+```r
 > library(pryr)
 > x <- 1:10
 > c(address(x), refs(x))
 > [1] "0x103100060" "1"
-{% endhighlight %}
-
+```
 
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
 
