@@ -25,11 +25,9 @@ Just to test the R code as follows:
 > [1] "0x103100060" "1"
 ```
 ----------
-Test Python code:
-Two ways to format strings in Python.
+There are generally two ways to format strings in Python. Check them out there!
 
 **Use Format**
-
 {% highlight python %}
 my_name = 'Michael';
 print ("Hello, my name is {name}".format(name=my_name));
