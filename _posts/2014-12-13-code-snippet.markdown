@@ -27,20 +27,22 @@ Just to test the R code as follows:
 ----------
 Test Python code:
 Two ways to format strings in Python.
-*Use Format*
-```python
+**Use Format**
+
+{% highlight python %}
 my_name = 'Michael';
 print ("Hello, my name is {name}".format(name=my_name));
 
 "Hello, my name is Michael"
-```
-*Use  ```%``` in older version of Python*
-```python
+{% endhighlight %}
+
+**Use  ```%``` in older version of Python**
+{% highlight python %}
 name = "Mike";
 print "Hello %s" % (name);
 
 Hello Mike
-```
+{% endhighlight %}
 
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
 
