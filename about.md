@@ -2,8 +2,6 @@
 layout: default
 title: About Honglei
 ---
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-
 <div class="post">
 	<h1 class="pageTitle">About Honglei</h1>
 	<!---<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt=""> --->
