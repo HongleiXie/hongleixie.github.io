@@ -5,7 +5,7 @@ title: About Honglei
 <div class="post">
 	<h1 class="pageTitle">About Honglei</h1>
 	<!---<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt=""> --->
-	<p class="intro">I enjoy coding, playing with massive data, storytelling with statistics. I am driven to dig into data and try to gain insights with powerful tools, mostly open source. I am obsessed with anything beautiful yet simple, like \\[x_a\\]. Data analytics enthusiast but be very cautious about <a href=https://en.wikipedia.org/wiki/All_models_are_wrong> complicated models</a>. Born and raised in Chongqing, China, now living and working in Toronto, Canada.
+	<p class="intro">I enjoy coding, playing with massive data, storytelling with statistics. I am driven to dig into data and try to gain insights with powerful tools, mostly open source. I am obsessed with anything beautiful yet simple. Data analytics enthusiast but be very cautious about <a href=https://en.wikipedia.org/wiki/All_models_are_wrong> complicated models</a>. Born and raised in Chongqing, China, now living and working in Toronto, Canada.
 	<!---By the way, the website theme is a <a href="http://jekyllrb.com">Jekyll</a> Theme.--->
 	</p>
 
