@@ -18,10 +18,9 @@ print_hi('Tom')
 Just to test the R code as follows:
 
 {% highlight r %}
-> library(pryr)
-> x <- 1:10
-> c(address(x), refs(x))
-> [1] "0x103100060" "1"
+library(pryr)
+x <- 1:10
+c(address(x), refs(x))
 {% endhighlight %}
 
 ----------
