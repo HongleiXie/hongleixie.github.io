@@ -18,10 +18,11 @@ navigation:
    url: /about
  - title: Contact
    url: /contact
-
+ - title: LinkedIn
+   url: http://https://ca.linkedin.com/in/hongleixie
+   
 social:
   
-   email: xhonglei2007@gmail.com
-
+email: xhonglei2007@gmail.com
 google_analytics: "UA-58263416-1"
 pygments: true
