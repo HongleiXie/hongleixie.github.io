@@ -3,7 +3,7 @@ layout: post
 title:  "Intro to the website"
 date:   2015-11-28
 ---
-I have been in love with writing since childhood because I found out keeping track of work and life is very helpful with not wasting my time.  Inspired by <a href = "http://yihui.name/en">Yihui Xie</a> who is a well-known data scientist in the Chinese R/stats community, and my friend <a href = "http://linxihui.github.io/">Eric</a>, I finally decided to do it today!
+<span class="dropcap">I</span> have been in love with writing since childhood because I found out keeping track of work and life is very helpful with not wasting my time.  Inspired by <a href = "http://yihui.name/en">Yihui Xie</a> who is a well-known data scientist in the Chinese R/stats community, and my friend <a href = "http://linxihui.github.io/">Eric</a>, I finally decided to do it today!
 
 ###How do I create the website
 The website is created with <a href="http://jekyllrb.com">Jekyll</a>, a simple, blog-aware, static site generator, and <a href="https://pages.github.com">Github Pages</a> where I can manage codes easily. The reason why I use them is that you can have full control over everything: your posts, layouts, figures, syntax highlighting of codes, even LaTex-like mathematical formulas! Literally everything. Check out the <a href="http://jekyllrb.com">Jekyll Docs</a> for more info on how to get the most out of Jekyll. The articles are written with <a href="https://stackedit.io/">StackEdit</a> so that I only need to focus on writing instead of annoying format stuff. 
