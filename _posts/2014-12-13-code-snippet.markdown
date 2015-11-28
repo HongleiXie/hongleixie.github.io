@@ -3,7 +3,7 @@ layout: post
 title:  "Post With A Code Snippet"
 date:   2014-12-13
 ---
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes! To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext. $$\sigma x_a$$
+You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes! To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
 
 Jekyll also offers powerful support for code snippets:
 
@@ -17,11 +17,10 @@ print_hi('Tom')
 ----------
 Just to test the R code as follows:
 
-{% highlight r %}
+~~~ r
 library(pryr)
 x <- 1:10
 c(address(x), refs(x))
-{% endhighlight %}
 
 ----------
 There are generally two ways to format strings in Python. Check them out there!
