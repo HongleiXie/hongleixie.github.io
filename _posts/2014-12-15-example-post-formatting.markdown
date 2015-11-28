@@ -8,7 +8,7 @@ date:   2014-12-15
 
 # Heading 1
 
-Another First level header
+First level header
 ==================
 
 Second level header
