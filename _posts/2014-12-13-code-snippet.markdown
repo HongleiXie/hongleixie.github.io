@@ -3,8 +3,7 @@ layout: post
 title:  "Post With A Code Snippet"
 date:   2014-12-13
 ---
-Y</span>ou'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes! To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
-$\sigma x_a$
+Y</span>ou'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes! To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext. $$\sigma x_a$$
 
 Jekyll also offers powerful support for code snippets:
 
