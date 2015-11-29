@@ -19,7 +19,7 @@ Second level header
 <h5>H3 header</h5>
 <h6>H6 header</h6>
 >Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.
-<p>Test math: $x_a$</p>
+
 
 ## Unordered List
 * List Item
