@@ -10,7 +10,7 @@ title: Contact Me
   
     <p>The form is provided by <a href="http://formspree.io/">Formspree.</a> Follow the directions on their site to set up the form for use.</p>
     --->
-    <p class='intro'>I always weclcome discussions and enquires regarding my work, feel free to submit your comments in the forms on the right.</p>
+    <p class='intro'>I always welcome discussions and enquires regarding my work, feel free to submit your comments in the forms on the right.</p>
     
   </div>
   <form action="http://formspree.io/xhonglei2007@gmail.com" method="POST">
