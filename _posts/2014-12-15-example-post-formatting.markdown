@@ -6,11 +6,17 @@ date:   2014-12-15
 
 <p class="intro"><span class="dropcap">C</span>urabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur.</p>
 
-<blockcode>
-one
+<blockquote>one
 two
 three
-</blockcode>
+</blockquote>
+
+>那时我们有梦，
+关于文学，
+关于爱情，
+关于穿越世界的旅行。 
+如今我们深夜饮酒， 
+都是梦破碎的声音。
 
 # Heading 1
 
