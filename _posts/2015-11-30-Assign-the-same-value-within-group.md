@@ -31,7 +31,7 @@ Each observation is grouped by `id`.  I want to add a variable`flag` following t
 - **Rule 1**: If it's unique in the combinations of `id` and `bus`, `flag = 1`;
 - **Rule 2**: If any one of records flag is assigned to `1` then all records within the same group (i.e. having the same `id` value) will also have `flag = 1`
 So the desired output table should look like: 
-```sas
+```
 id bus flag 
 1 a 0 
 1 a 0 
@@ -67,6 +67,7 @@ data temp;
 ```
 Do you find the problem here? By doing so, it will not meet the second requirement because the output will flag record `4 e` to `0` but flag observation `4 f` to `1`! 
 The trick I later thought of was to sort by `flag` in descending order and assign the rest of observations within the group `flag` value as same as the first one in the group. 
+
 ```
 proc sort data = temp;
  by id descending flag bus;
