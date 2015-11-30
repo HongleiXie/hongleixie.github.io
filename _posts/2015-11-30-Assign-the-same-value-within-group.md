@@ -4,6 +4,7 @@ title:  "SAS tricks: Assign the same value within group"
 date:   2015-11-30
 ---
 <span class="dropcap">W</span>e often use `NODUPKEY` or `NODUP` with `BY` statement to filter out duplicates in terms of specified variables in `BY`. However, the problem I dealt with today seemed to be a bit tricky. And I surprisingly found out how powerful `RETAIN` statement is! Let me simplify the problem as follows:
+
 The dataset, `test`, just for an example, looks like:
 
 ```
@@ -28,7 +29,7 @@ data test;
 ;
 ```
 
-Each observation is grouped by `id`.  I want to add a variable`flag` following the logic:
+Each observation is grouped by `id`.  I want to add a variable `flag` following the logic:
 
 * Rule 1: If it's unique in the combinations of `id` and `bus`, `flag = 1`;
 * Rule 2: If any one of records flag is assigned to `1` then all records within the same group (i.e. having the same `id` value) will also have `flag = 1`
