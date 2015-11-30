@@ -28,9 +28,9 @@ data test;
 ;
 ```
 
-Each observation is grouped by `id`.  I want to add a variable`flag` following the logic: 
-- **Rule 1**: If it's unique in the combinations of `id` and `bus`, `flag = 1`;
-- **Rule 2**: If any one of records flag is assigned to `1` then all records within the same group (i.e. having the same `id` value) will also have `flag = 1`
+Each observation is grouped by `id`.  I want to add a variable`flag` following the logic:
+- Rule 1: If it's unique in the combinations of `id` and `bus`, `flag = 1`;
+- Rule 2: If any one of records flag is assigned to `1` then all records within the same group (i.e. having the same `id` value) will also have `flag = 1`
 So the desired output table should look like: 
 
 ```
