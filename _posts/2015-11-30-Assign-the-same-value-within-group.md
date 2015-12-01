@@ -7,7 +7,7 @@ date:   2015-11-30
 
 The dataset, `test`, just for an example, looks like:
 
-```
+{% prism sas %}
 data test;
  input id bus$;
  datalines;
@@ -27,7 +27,7 @@ data test;
  6 c
  7 e
 ;
-```
+{% endprism %}
 
 Each observation is grouped by `id`.  I want to add a variable `flag` following the logic:
 
