@@ -7,6 +7,9 @@ date:   2015-11-30
 
 The dataset, `test`, just for an example, looks like:
 
+<link href="themes/prism.css" rel="stylesheet" />
+<script src="prism.js"></script>
+<pre>
 <code class='sas'>
 data test;
  input id bus$;
@@ -28,7 +31,7 @@ data test;
  7 e
 ;
 </code>
-
+</pre>
 
 Each observation is grouped by `id`.  I want to add a variable `flag` following the logic:
 
