@@ -13,8 +13,8 @@ it has been assumed that most of pairs of gene expressions are insignificant. Th
 should be made to take advantage of the sparsity assumption when estimating covariance matrices.
 
 ## Very Brief Intro ##
-Let $$X = (X_1, X_2, ...X_p)^T$$ be a $$p$$-variate vector with true covariance matrix $S_0$. Given i.i.d random
-sample $X_1, X2, ...X_n$ from the distribution of $X$, the sample covariance matrix is given by:
+Let \(X = (X_1, X_2, ...X_p)^T\) be a \(p\)-variate vector with true covariance matrix \(S_0\). Given i.i.d random
+sample \(X_1, X2, ...X_n\) from the distribution of \(X\), the sample covariance matrix is given by:
 $$
 
 $$
@@ -44,7 +44,7 @@ different thresholding functions. Based on the adaptive thresholding estimation 
 ### Conclusion ###
 From the simulation results, hard thresholding seems to perform the best in terms of loss under
 spectral norm. Next comes to the adaptive lasso. The sample covariance, as a baseline estimator,
-not surprisingly turns out to be one generating the largest bias. However, when $p>>n$, the
+not surprisingly turns out to be one generating the largest bias. However, when \(p>>n\), the
 difference between different thresholding functions are not that large anymore. Another interesting
 fact lies in the standard errors: with the increasing $p$, hard, soft and adaptive lasso thresholding
 all exhibit decay pattern in standard errors. However, the loss of sample covariance tends to have
@@ -54,5 +54,4 @@ difference between those three thresholding methods. How does it come? Maybe the
 ## What's Next? ##
 Tong Cai gave us a mathematically fancy method to estimate high dimensional covariance matrix, It's for me more like a missing impossible! Imagine how many parameters do you have and how little information do you know! (i.e. observations $n$, plus sparsity pattern, which is our case here) Anyhow, what I do concern is the efficiency when it goes to production. So my next step might be converting a few key(aka. slow) functions to C++.
 
-
-> Please check out the source R codes in my [Github](https://github.com/HongleiXie/adaptive-thresholding.git).
+- Please check out the source R codes in my [Github](https://github.com/HongleiXie/adaptive-thresholding.git).
