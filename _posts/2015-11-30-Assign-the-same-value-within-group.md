@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SAS tricks: Assign the same value within group"
+title:  "SAS tricks: Assign the Same Value within Group"
 date:   2015-11-30
 ---
 <span class="dropcap">W</span>e often use `NODUPKEY` or `NODUP` with `BY` statement to filter out duplicates in terms of specified variables in `BY`. However, the problem I dealt with today seemed to be a bit tricky. And I surprisingly found out how powerful `RETAIN` statement is! Let me simplify the problem as follows:
