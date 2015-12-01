@@ -3,7 +3,6 @@ layout: post
 title:  "adaptive thresholding"
 date:   2015-12-01
 ---
-<p>
 ## Motivation ##
 Motivated by applications in a wide range of fields in signal processing, social science, finance, genetics etc, statistical inference in high dimensional data is a problem of great
 interest. Covariance matrix plays an important role in many fundamental models including
@@ -13,13 +12,13 @@ it has been assumed that most of pairs of gene expressions are insignificant. Th
 should be made to take advantage of the sparsity assumption when estimating covariance matrices.
 
 ## Very Brief Intro ##
-
-Let \(X = (X_1, X_2, ...X_p)^T\) be a \(p\)-variate vector with true covariance matrix \(S_0\). Given i.i.d random
+<p>
+Let $X = (X_1, X_2, ...X_p)^T$ be a \(p\)-variate vector with true covariance matrix \(S_0\). Given i.i.d random
 sample \(X_1, X2, ...X_n\) from the distribution of \(X\), the sample covariance matrix is given by:
 $$
 
 $$
-
+</p>
 However, we know that sample covariance is not a consistent estimator. There have been a vast of literature discussing estimation on sparse covariance matrix. A popular approach to introduce sparsity is to add penalty (i.e. thresholding methods) on sample covariance matrix. 
 
 The idea is as simple as this: we all know sample covariance is not a good choice, but it's our only available choice. At least it's a good *sample* to start with. The rest of thing is modification, making it behaving well theoretically. 
@@ -57,4 +56,4 @@ Tong Cai gave us a mathematically fancy method to estimate high dimensional cova
 
 ***Please check out the source R codes in my [Github](https://github.com/HongleiXie/adaptive-thresholding.git).***
 
-</p>
+
