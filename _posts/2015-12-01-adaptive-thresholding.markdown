@@ -54,6 +54,5 @@ difference between those three thresholding methods. How does it come? Maybe the
 ## What's Next? ##
 Tong Cai gave us a mathematically fancy method to estimate high dimensional covariance matrix, It's for me more like a missing impossible! Imagine how many parameters do you have and how little information do you know! (i.e. observations $n$, plus sparsity pattern, which is our case here) Anyhow, what I do concern is the efficiency when it goes to production. So my next step might be converting a few key(aka. slow) functions to C++.
 
-```
-Please check out the source R codes in my [Github](https://github.com/HongleiXie/adaptive-thresholding.git).
-```
+***Please check out the source R codes in my [Github](https://github.com/HongleiXie/adaptive-thresholding.git).***
+
