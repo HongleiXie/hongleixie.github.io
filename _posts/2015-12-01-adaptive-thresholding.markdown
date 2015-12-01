@@ -13,7 +13,7 @@ it has been assumed that most of pairs of gene expressions are insignificant. Th
 should be made to take advantage of the sparsity assumption when estimating covariance matrices.
 
 ## Very Brief Intro ##
-Let $X = (X_1, X_2, ...X_p)^T$ be a $p$-variate vector with true covariance matrix $S_0$. Given i.i.d random
+Let $$X = (X_1, X_2, ...X_p)^T$$ be a $$p$$-variate vector with true covariance matrix $S_0$. Given i.i.d random
 sample $X_1, X2, ...X_n$ from the distribution of $X$, the sample covariance matrix is given by:
 $$
 
