@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "adaptive thresholding"
+date:   2015-12-01
+---
+
 ## Motivation ##
 Motivated by applications in a wide range of fields in signal processing, social science, finance, genetics etc, statistical inference in high dimensional data is a problem of great
 interest. Covariance matrix plays an important role in many fundamental models including
