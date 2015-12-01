@@ -6,10 +6,8 @@ date:   2015-11-30
 <span class="dropcap">W</span>e often use `NODUPKEY` or `NODUP` with `BY` statement to filter out duplicates in terms of specified variables in `BY`. However, the problem I dealt with today seemed to be a bit tricky. And I surprisingly found out how powerful `RETAIN` statement is! Let me simplify the problem as follows:
 
 The dataset, `test`, just for an example, looks like:
-<link href="prism.css" rel="stylesheet" />
-<script src="prism.js"></script>
-<pre>
-<code class='sas'>
+
+```
 data test;
  input id bus$;
  datalines;
@@ -29,8 +27,7 @@ data test;
  6 c
  7 e
 ;
-</code>
-</pre>
+```
 
 Each observation is grouped by `id`.  I want to add a variable `flag` following the logic:
 
