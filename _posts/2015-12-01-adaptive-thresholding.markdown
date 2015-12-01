@@ -13,7 +13,7 @@ should be made to take advantage of the sparsity assumption when estimating cova
 
 ## Very Brief Intro ##
 <p>
-Let $X = (X_1, X_2, ...X_p)^T$ be a \(p\)-variate vector with true covariance matrix \(S_0\). Given i.i.d random
+Let \(X = (X_1, X_2, ...X_p)^T\) be a \(p\)-variate vector with true covariance matrix \(S_0\). Given i.i.d random
 sample \(X_1, X2, ...X_n\) from the distribution of \(X\), the sample covariance matrix is given by:
 $$
 
@@ -42,6 +42,7 @@ different thresholding functions. Based on the adaptive thresholding estimation 
 ### Numerical Results ###
 
 ### Conclusion ###
+<p>
 From the simulation results, hard thresholding seems to perform the best in terms of loss under
 spectral norm. Next comes to the adaptive lasso. The sample covariance, as a baseline estimator,
 not surprisingly turns out to be one generating the largest bias. However, when \(p>>n\), the
@@ -50,7 +51,7 @@ fact lies in the standard errors: with the increasing \(p\), hard, soft and adap
 all exhibit decay pattern in standard errors. However, the loss of sample covariance tends to have
 larger variability if \(p\) becomes bigger. As for the support recovery, it appears that no significant
 difference between those three thresholding methods. How does it come? Maybe the support recovery ability largely depends on the estimation method where choice of different thresholding functions has very little impact on them?
-
+</p>
 ## What's Next? ##
 Tong Cai gave us a mathematically fancy method to estimate high dimensional covariance matrix, It's for me more like a missing impossible! Imagine how many parameters do you have and how little information do you know! (i.e. observations $n$, plus sparsity pattern, which is our case here) Anyhow, what I do concern is the efficiency when it goes to production. So my next step might be converting a few key(aka. slow) functions to C++.
 
