@@ -47,7 +47,12 @@ We know the model generates a banded matrix with ordering.
 \(n = 100\) i.i.d \(p\) - variate random vectors are produced from \(N(\mathbf{0}, \mathbf{\Sigma})\). We choose \(p = 30, 100, 200, 500\) to represent different scenarios. To avoid the sampling bias, 100 replications are generated under each setting.
 </p>
 ### Numerical Results ###
-
+The performance is measured by matrix spectral loss and TPR/FPR. Specifically, spectral loss is defined as the largest singular value of the risk:
+<p>
+\[
+|| \mathbf{\Sigma} - \mathbf{\hat{\Sigma}} ||_{l_2} = \max_{||x||_2 = 1} || (\mathbf{\Sigma} - \mathbf{\hat{\Sigma}})x ||_2
+\]
+</p>
 ### Conclusion ###
 <p>
 From the simulation results, hard thresholding seems to perform the best in terms of loss under
