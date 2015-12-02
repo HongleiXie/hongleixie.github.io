@@ -38,13 +38,11 @@ different thresholding functions. Based on the adaptive thresholding estimation 
 ## Simulation Study ##
 ### Simulation Settings ###
 <p>
-\mathbf{\Sigma} = diag(\mathbf{A_1}, \mathbf{A_2}) where 
-\mathbf{A_1} = (\sigma_{ij})_{1 \le i,j \le p/2}, \quad \sigma_{ij} = (1- \frac{\left | i-j \right |}{10})_+ 
-\mathbf{A_2} = 4\mathbf{I}_{p/2 \times p/2}
+\(\mathbf{\Sigma} = diag(\mathbf{A_1}, \mathbf{A_2})\) where 
+\(\mathbf{A_1} = (\sigma_{ij})_{1 \le i,j \le p/2}, \quad \sigma_{ij} = (1- \frac{\left | i-j \right |}{10})_+ 
+\mathbf{A_2} = 4\mathbf{I}_{p/2 \times p/2}\)
 We know the model generates a banded matrix with ordering. 
-</p>
-<p>
-\(n = 100\) i.i.d \(p\)- variate random vectors are produced from \(N(\mathbf{0}, \mathbf{\Sigma})\). We choose \(p = 30, 100, 200, 500\) to represent different scenarios. To avoid the sampling bias, 100 replications are generated under each setting.
+\(n = 100\) i.i.d \(p\) - variate random vectors are produced from \(N(\mathbf{0}, \mathbf{\Sigma})\). We choose \(p = 30, 100, 200, 500\) to represent different scenarios. To avoid the sampling bias, 100 replications are generated under each setting.
 </p>
 ### Numerical Results ###
 
