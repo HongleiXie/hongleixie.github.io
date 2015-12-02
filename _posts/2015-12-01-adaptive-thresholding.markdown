@@ -26,10 +26,20 @@ Many thresholding methods have been proposed which can be loosely divided into t
 variability therefore universal thresholding may not be good in such scenarios. Related theories and simulation studies have showed adaptive thresholding estimator uniformly outperform the universal estimator.
 
 In an addition, there are three commonly used thresholding functions in practice.
-
-- Hard thresholding:
-- Soft thresholding:
-- Smoothly Clipped Absolute Deviation Penalty (SCAD):
+<p>
+ Hard thresholding: $$ s^{Hard}_{\lambda}(z) = zI(|z| > \lambda)$$
+ Soft thresholding: $$ s^{Soft}_{\lambda}(z) = sign(z)I(|z| - \lambda)_{+} $$
+ Smoothly Clipped Absolute Deviation Penalty (SCAD):
+	\begin{equation}   s^{SCAD}_{\lambda}(z) = 
+	\begin{cases}
+	sign(z)I(|z| - \lambda)_{+}   &  |z| \le 2\lambda\\
+	\big( (a-1)z -sign(z)a\lambda \big) /\big(a-2\big)
+	&  2\lambda < |z| \le a\lambda\\
+	z   &  |z| >a\lambda
+	\end{cases}                
+	\end{equation}
+	for some $a > 2$.
+</p>
 
 ## What I have done ##
 Little theoretical work or numerical work has been done for choice between
