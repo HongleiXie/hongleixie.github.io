@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "adaptive thresholding"
+title:  "Adaptive Thresholding"
 date:   2015-12-01
 ---
 Motivated by applications in a wide range of fields in signal processing, social science, finance, genetics etc, statistical inference in high dimensional data is a problem of great
@@ -27,10 +27,10 @@ variability therefore universal thresholding may not be good in such scenarios. 
 
 In an addition, there are three commonly used thresholding functions in practice.
 <p>
- Hard thresholding: $$ s^{Hard}_{\lambda}(z) = zI(|z| > \lambda)$$
- Soft thresholding: $$ s^{Soft}_{\lambda}(z) = sign(z)I(|z| - \lambda)_{+} $$
+ Hard thresholding: \(s^{Hard}_{\lambda}(z) = zI(|z| > \lambda)\)
+ Soft thresholding: \(s^{Soft}_{\lambda}(z) = sign(z)I(|z| - \lambda)_{+} \)
  Smoothly Clipped Absolute Deviation Penalty (SCAD):
-	\begin{equation}   s^{SCAD}_{\lambda}(z) = 
+	\[\begin{equation}   s^{SCAD}_{\lambda}(z) = 
 	\begin{cases}
 	sign(z)I(|z| - \lambda)_{+}   &  |z| \le 2\lambda\\
 	\big( (a-1)z -sign(z)a\lambda \big) /\big(a-2\big)
@@ -38,7 +38,7 @@ In an addition, there are three commonly used thresholding functions in practice
 	z   &  |z| >a\lambda
 	\end{cases}                
 	\end{equation}
-	for some $a > 2$.
+	for some \(a > 2\).
 </p>
 
 ## What I have done ##
