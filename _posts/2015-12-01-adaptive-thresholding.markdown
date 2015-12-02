@@ -48,7 +48,6 @@ We know the model generates a banded matrix with ordering.
 </p>
 ### Numerical Results ###
 The performance is measured by matrix spectral loss and TPR/FPR. Specifically, spectral loss is defined as the largest singular value of the risk.
-
 Support recovery ability can be measured by true positive rate (TPR) and false positive rate (FPR). We use the same definition as used. Notice that for the sample covariance, TPR = 1 and FPR = 1.
 ### Conclusion ###
 <p>
