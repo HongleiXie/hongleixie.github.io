@@ -14,9 +14,9 @@ should be made to take advantage of the sparsity assumption when estimating cova
 <p>
 Let \(X = (X_1, X_2, ...X_p)^T\) be a \(p\)-variate vector with true covariance matrix \(S_0\). Given i.i.d random
 sample \(X_1, X2, ...X_n\) from the distribution of \(X\), the sample covariance matrix is given by:
-$$
-
-$$
+\[
+\Sigma_n = (\hat{\sigma}_{ij} )_{p\times p} = \frac{1}{n-1} \sum_{k=1}^{n} (\mathbf{X}_k- \mathbf{\bar{X}})(\mathbf{X}_k- \mathbf{\bar{X}})^T
+\]
 </p>
 However, we know that sample covariance is not a consistent estimator. There have been a vast of literature discussing estimation on sparse covariance matrix. A popular approach to introduce sparsity is to add penalty (i.e. thresholding methods) on sample covariance matrix. 
 
