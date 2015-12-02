@@ -44,11 +44,11 @@ different thresholding functions. Based on the adaptive thresholding estimation 
 </p>
 <p>
 We know the model generates a banded matrix with ordering. 
-\(n = 100\) i.i.d \(p\) - variate random vectors are produced from \(N(\mathbf{0}, \mathbf{\Sigma})\). We choose \(p = 30, 100, 200, 500\) to represent different scenarios. To avoid the sampling bias, 100 replications are generated under each setting.
+\(n =\) 100 i.i.d \(p\) - variate random vectors are produced from \(N(\mathbf{0}, \mathbf{\Sigma})\). We choose \(p =\) 30, 100, 200, 500 to represent different scenarios. To avoid the sampling bias, 100 replications are generated under each setting.
 </p>
 ### Numerical Results ###
 The performance is measured by matrix spectral loss and TPR/FPR. Specifically, spectral loss is defined as the largest singular value of the risk.
-Support recovery ability can be measured by true positive rate (TPR) and false positive rate (FPR). We use the same definition as used. Notice that for the sample covariance, TPR = 1 and FPR = 1.
+Support recovery ability can be measured by true positive rate (TPR) and false positive rate (FPR). Notice that for the sample covariance, TPR = 1 and FPR = 1.
 ### Conclusion ###
 <p>
 From the simulation results, hard thresholding seems to perform the best in terms of loss under
