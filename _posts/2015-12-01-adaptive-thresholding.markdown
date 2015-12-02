@@ -47,7 +47,34 @@ We know the model generates a banded matrix with ordering.
 \(n = 100\) i.i.d \(p\) - variate random vectors are produced from \(N(\mathbf{0}, \mathbf{\Sigma})\). We choose \(p = 30, 100, 200, 500\) to represent different scenarios. To avoid the sampling bias, 100 replications are generated under each setting.
 </p>
 ### Numerical Results ###
-
+<p>
+\[
+\begin{table}[h]
+	\begin{tabular*}{\linewidth}{ @{\extracolsep{\fill}} ll *{13}c @{}}
+		\toprule
+		$n$ & $p$ & \multicolumn{4}{c}{Hard} &
+		\multicolumn{4}{c}{Adaptive Lasso} & \multicolumn{4}{c}{Soft}\\
+		\midrule 
+		\midrule 
+		\addlinespace \\
+		\multirow{3}{*}{100} 
+		& 30  &&& 0.77/1.45 &&& 0.76/2.90 &&& 0.77/4.93\\
+		& 100  &&& 0.62/0.24 &&& 0.62/0.13 &&& 0.62/0.26\\
+		& 200  &&& 0.56/0.07 &&& 0.56/0.06 &&& 0.56/0.47\\
+		& 500  &&& 0.50/0.01 &&& 0.50/0.02 &&& 0.50/0.01\\
+		\midrule \addlinespace \\
+		\multirow{3}{*}{30}    
+		& 30  &&& 0.35/5.80 &&& 0.37/8.41 &&& 0.37/6.09\\
+		& 100 &&& 0.16/0.97 &&& 0.16/0.59 &&& 0.15/0.62\\
+		& 200  &&& 0.09/0.17 &&& 0.10/0.20 &&& 0.09/0.35\\
+		& 500 &&& 0.04/0.05 &&& 0.04/0.05 &&& 0.04/0.05\\
+		\bottomrule
+	\end{tabular*}
+	\caption{Comparison of average TPR/FPR($\times 10^{-4}$)}
+	\label{table1}
+\end{table}
+\]
+</p>
 ### Conclusion ###
 <p>
 From the simulation results, hard thresholding seems to perform the best in terms of loss under
