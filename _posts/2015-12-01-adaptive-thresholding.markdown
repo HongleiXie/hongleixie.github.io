@@ -49,9 +49,7 @@ We know the model generates a banded matrix with ordering.
 ### Numerical Results ###
 The performance is measured by matrix spectral loss and TPR/FPR. Specifically, spectral loss is defined as the largest singular value of the risk:
 <p>
-\(
-|| \mathbf{\Sigma} - \mathbf{\hat{\Sigma}} ||_{l_2} = \max_{||x||_2 = 1} || (\mathbf{\Sigma} - \mathbf{\hat{\Sigma}})x ||_2
-\)
+\(||\mathbf{\Sigma} - \mathbf{\hat{\Sigma}} ||_{l_2} = \max_{||x||_2 = 1} || (\mathbf{\Sigma} - \mathbf{\hat{\Sigma}})x||_2\)
 </p>
 ### Conclusion ###
 <p>
