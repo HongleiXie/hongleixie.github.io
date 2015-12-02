@@ -28,7 +28,7 @@ variability therefore universal thresholding may not be good in such scenarios. 
 In an addition, there are three commonly used thresholding functions in practice.
 
 - Hard thresholding <p> \\(s^{H}_{\lambda}(z) = zI(|z| > \lambda)\\) </p>
-- Soft thresholding <p> \\[s^{S}__{\lambda}(z) = sign(z)I(|z| - \lambda)_{+}\\] </p>
+- Soft thresholding <p> \\(s^{S}_ {\lambda}(z) = sign(z)I(|z| - \lambda)_{+}\\)</p>
 - Smoothly Clipped Absolute Deviation Penalty (SCAD)
 
 ## What I have done ##
