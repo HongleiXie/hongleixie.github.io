@@ -29,14 +29,13 @@ In an addition, there are three commonly used thresholding functions in practice
 
 - Hard thresholding <p> \\(s^{H}_{\lambda}(z) = zI(|z| > \lambda)\\) </p>
 - Soft thresholding <p> \\(s^{S}_ {\lambda}(z) = sign(z)I(|z| - \lambda)_{+}\\)</p>
-- Adaptive Lasso thresholding <p> \\(s^{A}_{\lambda}(z) = z(1 - |\lambda/z|^\eta)_{+}\\)</p>
-
+- Adaptive Lasso thresholding <p>\\[s^{A}_{\lambda}(z) = z(1 - |\lambda/z|^\eta)_{+}\\]</p>
 - Smoothly Clipped Absolute Deviation Penalty (SCAD)
 
 ## What I have done ##
 Little theoretical work or numerical work has been done for choice between
 different thresholding functions. Based on the adaptive thresholding estimation method, I will fill in the gap, comparing performance of different thresholding functions under adaptive estimation framework. Please see the [paper](http://arxiv.org/pdf/1102.2237.pdf) for details of the procedures. 
-<p> In an addition, Fan and Li (2001) proposed a method, Smoothly Clipped Absolute Deviation Penalty (SCAD), serves as the compromise between hard and soft thresholding. It involves a quadratic spline function with knots at \(\lambda\) and \(a\lambda\). And the resulting solution is continuous because it will not penalize excessively on large values. We do not include SCAD into comparison in the present essay for simplicity reason. </p>
+In an addition, Fan and Li (2001) proposed a method, Smoothly Clipped Absolute Deviation Penalty (SCAD), serves as the compromise between hard and soft thresholding. It involves a quadratic spline function with knots at <p>\(\lambda\) and a \(\lambda\)</p>. And the resulting solution is continuous because it will not penalize excessively on large values. We do not include SCAD into comparison in the present essay for simplicity reason.
 
 ## Simulation Study ##
 ### Simulation Settings ###
