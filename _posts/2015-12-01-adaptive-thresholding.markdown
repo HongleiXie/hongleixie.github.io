@@ -29,8 +29,8 @@ In an addition, there are three commonly used thresholding functions in practice
 
 - Hard thresholding <p> \\(s^{H}_{\lambda}(z) = zI(|z| > \lambda)\\) </p>
 - Soft thresholding <p> \\(s^{S}_ {\lambda}(z) = sign(z)I(|z| - \lambda)_{+}\\)</p>
-- Adaptive Lasso thresholding <p>\\[s^{A}_{\lambda}(z) = z(1 - |\lambda/z|^\eta)_{+}\\]</p>
-- Smoothly Clipped Absolute Deviation Penalty (SCAD)
+-Adaptive Lasso thresholding <p>\\[s^{A}_{\lambda}(z) = z(1 - |\lambda/z|^\eta)_{+}\\]</p>
+-Smoothly Clipped Absolute Deviation Penalty (SCAD)
 
 ## What I have done ##
 Little theoretical work or numerical work has been done for choice between
