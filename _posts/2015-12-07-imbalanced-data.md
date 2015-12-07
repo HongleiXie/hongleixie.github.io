@@ -24,7 +24,8 @@ along the n-dimensions of feature space \\(X\\).
 To create a synthetic sample, randomly select one of the K-nearest
 neighbors, then multiply the corresponding feature vector
 difference with a random number \\(\delta\\) between 0 and 1;
-and finally, add this vector to \\(X_i\\), allowing the classifiers to better predict unseen samples belonging to the minority class. SMOTE can be implemented in ```DMwR``` package. Let's see an example below. </p>
+and finally, add this vector to \\(X_i\\), allowing the classifiers to better predict unseen samples belonging to the minority class.</p>
+SMOTE can be implemented in ```DMwR``` package. Let's see an example below.
 
 ```r
 library(DMwR);
