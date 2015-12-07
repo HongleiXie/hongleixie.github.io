@@ -9,7 +9,6 @@ permalink: blog/:title/
 markdown: redcarpet
 redcarpet:
 extensions: [ "tables", "strikethrough", "superscript", "with_toc_data"]
-
 highlighter: pygments
 gems: [jekyll-paginate]
 paginate: 5
