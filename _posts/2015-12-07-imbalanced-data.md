@@ -18,13 +18,13 @@ misclassification of minority class and minimizing the overall error rate. Howev
 Specifically, for each sample in the minority class, consider the K-nearest
 neighbors where K is some specified integer.
 The K-nearest neighbors are defined as the
-K elements of \\(X_i\\) whose Euclidean distance between itself
-and \\(X_i\\) under consideration exhibits the smallest magnitude
-along the n-dimensions of feature space \\(X\\). 
+K elements of `\(X_i\)` whose Euclidean distance between itself
+and `\(X_i\)` under consideration exhibits the smallest magnitude
+along the n-dimensions of feature space `\(X\)`. 
 To create a synthetic sample, randomly select one of the K-nearest
 neighbors, then multiply the corresponding feature vector
-difference with a random number \\(\delta\\) between 0 and 1;
-and finally, add this vector to \\(X_i\\), allowing the classifiers to better predict unseen samples belonging to the minority class.</p>
+difference with a random number `\(\delta\)` between 0 and 1;
+and finally, add this vector to `\(X_i\)`, allowing the classifiers to better predict unseen samples belonging to the minority class.</p>
 SMOTE can be implemented in ```DMwR``` package. Let's see an example below.
 
 ```r
