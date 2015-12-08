@@ -17,7 +17,7 @@ misclassification of minority class and minimizing the overall error rate. Howev
 Synthetic Minority Over-sampling TEchnique (SMOTE) is one of the popular over-sampling algorithm to address imbalanced data problem. The basic idea is to create artificial data based on the feature space similarities between existing minority samples.
 Specifically, for each sample in the minority class, consider the K-nearest
 neighbors where K is some specified integer.
-The K-nearest neighbors are defined as the K elements of <span>$X_i$</span> whose Euclidean distance between itself and `\(X_i\)` under consideration exhibits the smallest magnitude
+The K-nearest neighbors are defined as the K elements of `\(X_i\)` whose Euclidean distance between itself and `\(X_i\)` under consideration exhibits the smallest magnitude
 along the n-dimensions of feature space `\(X\)`. 
 To create a synthetic sample, randomly select one of the K-nearest
 neighbors, then multiply the corresponding feature vector
