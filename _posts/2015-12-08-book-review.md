@@ -5,7 +5,7 @@ date:   2015-12-08
 ---
 <span class="dropcap">I</span>f you ask me what is the turning point in my just-launched data analytic career, I would category reading on this stimulating book: *The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century*, which is written to a popular audience about introducing hundreds of statistician's  ideas and how did these theories revolutionize people's lives in 20 century. I still remember how excited I was and at the same time I was deeply inspired by those stat geniuses.  [Sir Ronald Aylmer Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher), for example, is particularly prominent among them. This is the guy who developed ANOVA and  made *p-value* popular in statistics community. Many people care a lot about the citations of their research, I guess Sir Fisher probably would have the most citations ever in the stat community. Not to mention how his work make a great impact on the scientific world.
 
-Here is the book review I wrote in Chinese 4 years ago at the time when I was a college student then. Actually I felt even a bit embarrassed about some immature thoughts when looking back to this essay. Time flies but I'm glad I still remember the very moment of raising my mind of becoming a statistician. 
+Here is the book review I wrote in Chinese 4 years ago at the time when I was a college student then. Honestly I feel even a bit embarrassed about some immature thoughts when looking back to this essay. Time flies but I'm glad I still remember the very moment of raising my mind of becoming a statistician. 
 
 《女士品茶 ——20世纪统计怎样变革了科学》书评
 
@@ -23,9 +23,7 @@ Here is the book review I wrote in Chinese 4 years ago at the time when I was a 
 
 第二个，贝叶斯。其实我一直觉得概率应该都是条件概率，这比较符合我的认知和直觉。贝叶斯层次模型非常令人着迷，当分布的参数也是随机的，并且具有一个概率分布的时候，我们就有了超参数。你再有想象力一点就会知道还会有超-超参数，超-超-超参数…你要是觉得这纯粹是一群高智商无聊的统计学家搞出来的自娱自乐的玩意儿就错了！事实证明，统计理论是最具有实用性的，比如刚刚我说的那个超-超-超参数就运用在二战时期的密码分析上，比如日本人崛起的一个重要原因——优秀的质量管理水平——就拜美国统计学家Deming的几场讲座所赐。另外，你不知道的事里也许包括——其实，凯恩斯也是个统计学家。没错，就是写《就业、利息和货币通论》这部神书的John Maynard Keynes！他老人家的博士论文居然是《关于概率的讨论》。他在概率论方面提出了“个人概率”的观点，算是贝叶斯学派的一员，个人觉得一点都不make sense，里面分析的套路非常Keynes，无非就是和人们的心理、人们所处的文化背景有关什么的。
 
-
 第三个，鞅。看到鞅的时候我还是小小震动了一下，我对上学期的金融工程开始热爱的一个原因就是我在notes上看到了鞅这个字眼。这个字看着就让人觉得世界美好，科学有趣；因为鞅的存在，我偏执地认为金融工程也应该很美好很有趣的，于是有了后来。总之在《女士品茶》这本书上再次看到鞅，心里既震动又温暖。但是这次不是在为期权定价，这次说的是随机数列趋向于一个正态分布的充分条件。我们都知道中心极限定理，但是鞅的提出在中心极限定理之前好久。虽然和后者比起来有幼稚的地方吧但是我觉得它的思想很闪光啊，下一个数的最佳估计值就是上一个数。鞅的思想在为期权定价上面发挥得淋漓尽致，金工的老师有次给我说华尔街那些人也基本上是这么干的，理论值和实际值的偏差在可允许的范围之内。但是现在的情况是否还是这样呢？那就有很大一个问号了。
-
 
 最后，我不想矫情地把统计学思想和人生扯到一起。我认为那些潜心研究统计学理论的科学家们可能没怎么思考过这档子事儿，我也觉得似乎没那个好大的必要。不过，我还是想以另一个方式结束这篇书评。也许你猜到了，我想要质疑，质疑这场统计学革命。我不是拿起石头砸自己的脚，实际情况是上述提到的诸多这场革命留下来的宝贵遗产我都还没学会，但是我也想斗胆质疑下它。图基说：“世上没有什么事情神圣到不容质疑。”Fisher也好，XX领袖也好。我一直在怀疑人类是否有这个能力能构造出一个完美的模型来解释现实，然后完美地把参数估计出来，然后完美地给出预测。比如，一个很简单的问题，什么是概率？有人可以说清吗？也许那些工程师们化学家们生物学家们根本不屑回答这个问题，他们不用理会这个问题的答案照样可以让统计学满足他们的实际需要——用那些现成的模型——正确或是错误的。Kolmogorov给出了概率的数学化定义，任何一本概率论的教材上应该都有这个定义，但是我们只是背了这个抽象的定义却没办法在实际生活中找到对应。在这个问题的回答上我想我会一直做个悲观的不可知论者。当我学到更高一级的知识，知道了我以前理解的概率定义的浅薄，知道了我们应该在测度空间里来定义概率，但同时我们也应该保持警惕，所谓“尽信书不如无书”，谁又能保证我们目前认识到的概率就是逻辑完备，无懈可击的呢？不过好在我们仍然可以看到统计学在当今世界的各个领域里起到了无可比拟的巨大作用，理论上也许会被数学家诟病，但是在实务里却能够让统计学家挺起腰杆来——在发达国家里任何一种新药的研发都必须要有统计学家的签字！
 
