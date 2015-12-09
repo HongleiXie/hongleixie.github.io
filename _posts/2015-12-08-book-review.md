@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Book Review: The Lady Tasting Tea
+title:  "Book Review: The Lady Tasting Tea"
 date:   2015-12-08
 ---
 <span class="dropcap">I</span>f you ask me what is the turning point in my just-launched data analytic career, I would category reading on this stimulating book: *The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century*, which is written to a popular audience about introducing hundreds of statistician's  ideas and how did these theories revolutionize people's lives in 20 century. I still remember how excited I was and at the same time I was deeply inspired by those stat geniuses.  [Sir Ronald Aylmer Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher), for example, is particularly prominent among them. This is the guy who developed ANOVA and  made *p-value* popular in statistics community. Many people care a lot about the citations of their research, I guess Sir Fisher probably would have the most citations ever in the stat community. Not to mention how his work make a great impact on the scientific world.
