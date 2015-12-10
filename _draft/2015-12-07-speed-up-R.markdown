@@ -5,6 +5,7 @@ date:   2015-12-07
 ---
 <span class="dropcap">R</span> is awesome, probably the *best* tool for statisticians. 
 If someone in the data analytics area doesn't like it, I guess the effiency and its way of memory allocation might be primary reasons. 
-I assume this post will be edited time-by-time since codes are always needed to be optimized.
 
-For the time being, I use parallel computing strategy, in exchange of big memory, speed up my functions in R. 
+I assume this post will be edited time-by-time.
+
+For the time being, my stratege to speed up R is using parallel computing.
