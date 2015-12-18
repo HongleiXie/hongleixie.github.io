@@ -8,4 +8,15 @@ If someone in the data analytics area doesn't like it, I guess the effiency and 
 
 I assume this post will be edited time-by-time.
 
-For the time being, my stratege to speed up R is using parallel computing.
+For the time being, my strateges to speed up R can be summarized as follows:
+
+- More powerful computer? Not exactly, doesn't make much difference.... but you may want a faster server of course!
+- Use fast importing data package.
+- Try to specify as many options as you can.
+- Vectorize your code.
+- Parallel computing.
+- Try to avoid `for` loop as possible as you can.
+- Pre-allocate data structures always.
+- Use `Rcpp` package. 
+- Remove useless variables and data and flush memory as early as possible.
+
