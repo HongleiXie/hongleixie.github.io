@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Master Essay"
+title:  "Brief Intro to My Master Research Paper"
 date:   2015-11-29
 ---
 <p>
