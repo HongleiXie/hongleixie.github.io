@@ -8,7 +8,7 @@ title: About Honglei
 	<p class="intro">I strive for two things - freedom and influencing others. I enjoy creating cool stuff, playing with massive data, storytelling with statistics. I am obsessed with anything beautiful yet simple, like \(e^x = 1+ x + \frac{x^2}{2!}+\frac{x^3}{3!}+ ...\). Born and raised in Chongqing, China, now living and working in Toronto, Canada. 
 	<!---By the way, the website theme is a <a href="http://jekyllrb.com">Jekyll</a> Theme.--->
 	</p>
-<blockquote>Live as if you were to die tomorrow. Learn as if you were to live forever. - Mahatma Gandhi</blockquote>	
+	<h5><I>Live as if you were to die tomorrow. Learn as if you were to live forever. - Mahatma Gandhi</I>	</h5>	
 
 	<!---
 	<h2>Features</h2>
