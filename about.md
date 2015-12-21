@@ -5,10 +5,10 @@ title: About Honglei
 <div class="post">
 	<h1 class="pageTitle">About Honglei</h1>
 	<!---<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt=""> --->
-	<p class="intro">I enjoy coding, playing with massive data, storytelling with statistics. I am driven to dig into data and try to gain insights with powerful tools, mostly open source. I am obsessed with anything beautiful yet simple, like \(e^x = 1+ x + \frac{x^2}{2!}+\frac{x^3}{3!}+ ...\) Data analytics enthusiast but be very cautious about <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">complicated models</a>. Born and raised in Chongqing, China, now living and working in Toronto, Canada.
+	<p class="intro">I strive for two things - freedom and influencing others. I enjoy creating cool stuff, playing with massive data, storytelling with statistics. I am obsessed with anything beautiful yet simple, like \(e^x = 1+ x + \frac{x^2}{2!}+\frac{x^3}{3!}+ ...\). Born and raised in Chongqing, China, now living and working in Toronto, Canada. 
 	<!---By the way, the website theme is a <a href="http://jekyllrb.com">Jekyll</a> Theme.--->
 	</p>
-
+<blockquote>Live as if you were to die tomorrow. Learn as if you were to live forever. - Mahatma Gandhi</blockquote>	
 
 	<!---
 	<h2>Features</h2>
