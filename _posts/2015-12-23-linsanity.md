@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "linsanity"
+title:  "Linsanity"
 date:   2015-12-23
 ---
 
