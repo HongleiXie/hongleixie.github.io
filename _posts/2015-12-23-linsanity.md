@@ -13,8 +13,7 @@ What I'm gonna talk is DREAM and DREAM BIG. From my perspective, I only saw a li
 Particularly I was deeply moved by his faith to God and how his mother always unconditionally supported him to play the game which is not usual for an Asian parent.
 
 When he talked about how did he go through tough times, he said: 
->
-"God loves me, and that he has the perfect plan for me. His plan will take me through a lots of ups and downs, but if I stay faithful to him that in the end he will work everything for my good. Now when I play basketball, I don’t play for anyone else, I only play for God. That’s the type of purpose that he gave me, and once he gave me that purpose, is when I found my peace, and once I got my peace, that’s when I got my joy.”
+***"God loves me, and that he has the perfect plan for me. His plan will take me through a lots of ups and downs, but if I stay faithful to him that in the end he will work everything for my good. Now when I play basketball, I don’t play for anyone else, I only play for God. That’s the type of purpose that he gave me, and once he gave me that purpose, is when I found my peace, and once I got my peace, that’s when I got my joy.”***
 
 Never doubt it at all. I found it related to my life, my dream and my story. Just as the same as Jeremy's, I'm in my long journey to what I want to accomplish. If you still have something to be believed,  I strongly suggest you to watch this [movie](https://www.youtube.com/embed/tLUAOe-B-yo).
  
