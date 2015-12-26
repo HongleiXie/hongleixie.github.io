@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Simple Data Visualizations in R - Bar charts"
+title:  "Data Visualizations in R - Bar charts"
 date:   2015-12-25
 ---
 
