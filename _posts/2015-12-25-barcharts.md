@@ -4,7 +4,7 @@ title:  "Simple Data Visualizations in R - Bar charts"
 date:   2015-12-25
 ---
 
-It's my first time intending to give up `ggplot2`, when I saw the amazing(狂霸酷炫拽) plotting galleries using `googleVis` and `rCharts`.
+<span class="dropcap">I</span>t's my first time intending to give up `ggplot2`, when I saw the amazing(狂霸酷炫拽) plotting galleries using `googleVis` and `rCharts`.
 
 Here is a simple bar charts example and you can run the code locally to see the difference.
 
