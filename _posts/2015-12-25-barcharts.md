@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Simple Data Visualizations in R --- Bar charts"
+title:  "Simple Data Visualizations in R - Bar charts"
 date:   2015-12-25
 ---
 
@@ -76,5 +76,5 @@ ggplot(data=data, aes(x=month, y=count, fill=type, ymax = max(count)+1)) +
 
 ```
 
-Check out the example pages: http://rcharts.io/gallery/ and http://rcharts.io/gallery/.
+Check out the example pages for package [`rCharts`](http://rcharts.io/gallery/) and [`googleVis`](http://rcharts.io/gallery/).
 
