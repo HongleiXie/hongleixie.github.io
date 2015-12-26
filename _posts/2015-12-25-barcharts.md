@@ -6,7 +6,8 @@ date:   2015-12-25
 
 <span class="dropcap">I</span>t's my first time intending to give up `ggplot2`, when I saw the amazing(狂霸酷炫拽) plotting galleries using `googleVis` and `rCharts`.
 
-Here is a simple bar charts example and you can run the code locally to see the difference.
+Here is a simple bar charts example.Screenshots of results can be found [here](https://github.com/HongleiXie/hongleixie.github.io/blob/master/assets/img/googlevis_1225.png), [here](https://github.com/HongleiXie/hongleixie.github.io/blob/master/assets/img/rchart_1225.png) and [here](https://github.com/HongleiXie/hongleixie.github.io/blob/master/assets/img/ggplot_1225.png).
+Howver, I really suggest you to run the codes locally so that you can see the difference clearly.
 
 ###How do people choose?
 
