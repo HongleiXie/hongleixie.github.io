@@ -34,6 +34,14 @@ googlevis <- gvisComboChart(data = data, xvar = 'month',
 
 plot(googlevis);
 
+```
+<figure>
+    <img src="{{ '/assets/img/googlevis_1225.png' | prepend: site.baseurl }}" alt="">
+    <figcaption>Fig1. - googleVis</figcaption>
+</figure>
+
+```r
+
 ### rCharts #######################################################
 
 # same dataset but need more manipulation if using rCharts or ggplot2
@@ -63,6 +71,14 @@ n2$yAxis(tickFormat = "#!
         );
 n2;
 
+```
+<figure>
+    <img src="{{ '/assets/img/rchart_1225.png' | prepend: site.baseurl }}" alt=""> 
+    <figcaption>Fig2. - rCharts</figcaption>
+</figure>
+
+
+```r
 ### ggplot2 #######################################################
 positions <- c('AUG', 'SEP', 'OCT', 'NOV');
 
@@ -75,6 +91,11 @@ ggplot(data=data, aes(x=month, y=count, fill=type, ymax = max(count)+1)) +
 
 
 ```
+
+<figure>
+    <img src="{{ '/assets/img/ggplot_1225.png' | prepend: site.baseurl }}" alt=""> 
+    <figcaption>Fig3. - ggplot2</figcaption>
+</figure>
 
 Check out the example pages for package [`rCharts`](http://rcharts.io/gallery/) and [`googleVis`](http://rcharts.io/gallery/).
 
