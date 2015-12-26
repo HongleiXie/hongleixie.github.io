@@ -3,7 +3,7 @@ layout: post
 title:  "Adaptive Thresholding"
 date:   2015-12-01
 ---
-Motivated by applications in a wide range of fields in signal processing, social science, finance, genetics etc, statistical inference in high dimensional data is a problem of great
+<span class="dropcap">M</span>otivated by applications in a wide range of fields in signal processing, social science, finance, genetics etc, statistical inference in high dimensional data is a problem of great
 interest. Covariance matrix plays an important role in many fundamental models including
 principal component analysis and linear/quadratic discriminant analysis. In high dimensional
 data setting, we often observe sparse covariance matrix. For example, in cancer microarray experiment,
