@@ -4,7 +4,7 @@ title:  "Linsanity"
 date:   2015-12-23
 ---
 
-Last Saturday night I watched a documentary film, *linsanity*, about [Jeremy Lin](https://en.wikipedia.org/wiki/Jeremy_Lin), the model Asian Ameriacian NBA player.
+<span class="dropcap">L</span>ast Saturday night I watched a documentary film, *linsanity*, about [Jeremy Lin](https://en.wikipedia.org/wiki/Jeremy_Lin), the model Asian Ameriacian NBA player.
 
 Since there are too many articles analyzing *linsanity* phenomenon and I don't think I'm the right person to talk much about something like asian american struggles in WASP-dominated society, and why people from all over the world are so crazy about him, or  how to make it in NBA .... Most of answers actually can be found in the movie. 
 
