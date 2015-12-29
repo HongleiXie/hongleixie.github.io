@@ -24,7 +24,7 @@ library(rCharts);
 
 ### sample data ###################################################
 data <- data.frame(month = c('AUG', 'SEP', 'OCT', 'NOV', 'DEC'),
-                   var1 = c(7 ,2,1,14,8),
+                   var1 = c(7,2,1,14,8),
                    var2 = c(2,1,4,1,2)
                     );
 
@@ -61,7 +61,7 @@ Screenshot:
 data <- data.frame(
                   month = c('AUG', 'SEP', 'OCT', 'NOV', 'DEC', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'),
                    type = c(rep('var1', 5), rep('var2', 5)),
-                   count = c(7,2,1,14 ,8,2,1,4,1,2)
+                   count = c(7,2,1,14,8,2,1,4,1,2)
                    );
 
 
