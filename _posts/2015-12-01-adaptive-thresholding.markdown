@@ -38,7 +38,8 @@ different thresholding functions. Based on the adaptive thresholding estimation 
 In an addition, Fan and Li (2001) proposed a method, Smoothly Clipped Absolute Deviation Penalty (SCAD), serves as the compromise between hard and soft thresholding. And the resulting solution is continuous because it will not penalize excessively on large values. We do not include SCAD into comparison in the present essay for simplicity reason.
 
 ## Simulation Study ##
-### Simulation Settings ###
+
+### Simulation Settings
 <p>
 \(\mathbf{\Sigma} = diag(\mathbf{A_1}, \mathbf{A_2})\) where 
 \(\mathbf{A_1} = (\sigma_{ij})_{1 \le i,j \le p/2}, \quad \sigma_{ij} = (1- \frac{\left | i-j \right |}{10})_+ 
@@ -48,10 +49,10 @@ In an addition, Fan and Li (2001) proposed a method, Smoothly Clipped Absolute D
 We know the model generates a banded matrix with ordering. 
 \(n =\) 100 i.i.d \(p\) - variate random vectors are produced from \(N(\mathbf{0}, \mathbf{\Sigma})\). We choose \(p =\) 30, 100, 200, 500 to represent different scenarios. To avoid the sampling bias, 100 replications are generated under each setting.
 </p>
-### Numerical Results ###
+### Numerical Results
 The performance is measured by matrix spectral loss and TPR/FPR. Specifically, spectral loss is defined as the largest singular value of the risk.
 Support recovery ability can be measured by true positive rate (TPR) and false positive rate (FPR). Note that for the sample covariance, TPR = 1 and FPR = 1.
-### Conclusion ###
+### Conclusion
 <p>
 From the simulation results, hard thresholding seems to perform the best in terms of loss under
 spectral norm. Next comes to the adaptive lasso. The sample covariance, as a baseline estimator,
