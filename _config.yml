@@ -9,7 +9,7 @@ permalink: blog/:title/
 markdown: kramdown
 redcarpet:
  extensions: ["tables"]
-highlighter: pygments
+highlighter: rouge
 gems: [jekyll-paginate]
 paginate: 5
 
