@@ -7,13 +7,17 @@ date:   2015-12-07
 
 ## Problem
 You may naturally ask what's the consequence if you train on imbalanced data simply using the commonly used algorithms? For example, logistic regression, regularized generalized linear models, decision trees even random forest. The resulting problem is that it tends to provide a severely imbalanced degree of accuracy, which means that the majority class has high accuracy rate, like 80%, while the minority has low accuracy rate, usually less than 10%. The reason why these commonly used classification algorithms do not work well because they aim to minimize the overall error rate rather than paying attention to the minority class. This can be a serious problem if the distribution of misclassification cost is unequal. For example, rare cancer diagnosing. The cost of classifying a cancer patient, which is the minority class, to non-cancer is much higher than the other way around. Another example includes credit default classification. 
+
 ## Solutions
+
 - **Sampling Methods:** down-sampling majority class or over-sampling
 minority or both. The idea of over-sampling is quite intuitive. Suppose when you are facing with imbalanced data, one way to balance data is adding more samples from minority class. Instead of oversampling minority, another way to balance data is down-sampling majority class
+
 - **Cost Sensitive Methods:** assigning a high cost (i.e. weight) to
 misclassification of minority class and minimizing the overall error rate. However,  the weights are generally hard to choose.
 
 ### SMOTE
+
 Synthetic Minority Over-sampling TEchnique (SMOTE) is one of the popular over-sampling algorithm to address imbalanced data problem. The basic idea is to create artificial data based on the feature space similarities between existing minority samples.
 Specifically, for each sample in the minority class, consider the K-nearest
 neighbors where K is some specified integer.
@@ -42,6 +46,7 @@ SMOTE(y ~ . ,
 The ```learner``` parameter enables you to specify base classification method and associated parameters (e.g. ```mtry```, ```ntree``` ...). However, it often leads to over-fitting problem.
 
 ### Cost Sensitive Methods
+
 Here is an example to apply weights in ```random forest``` model.
 
 ```r
