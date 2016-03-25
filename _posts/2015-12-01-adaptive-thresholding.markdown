@@ -50,9 +50,12 @@ We know the model generates a banded matrix with ordering.
 \(n =\) 100 i.i.d \(p\) - variate random vectors are produced from \(N(\mathbf{0}, \mathbf{\Sigma})\). We choose \(p =\) 30, 100, 200, 500 to represent different scenarios. To avoid the sampling bias, 100 replications are generated under each setting.
 </p>
 ### Numerical Results
+
 The performance is measured by matrix spectral loss and TPR/FPR. Specifically, spectral loss is defined as the largest singular value of the risk.
 Support recovery ability can be measured by true positive rate (TPR) and false positive rate (FPR). Note that for the sample covariance, TPR = 1 and FPR = 1.
+
 ### Conclusion
+
 <p>
 From the simulation results, hard thresholding seems to perform the best in terms of loss under
 spectral norm. Next comes to the adaptive lasso. The sample covariance, as a baseline estimator,
@@ -63,7 +66,8 @@ all exhibit decay pattern in standard errors. However, the loss of sample covari
 larger variability if \(p\) becomes bigger. As for the support recovery, it appears that no significant
 difference between those three thresholding methods. How does it come? Maybe the support recovery ability largely depends on the estimation method where choice of different thresholding functions has very little impact on them?
 </p>
-## What's Next ##
+
+## What's Next
 [Tony Cai](http://www-stat.wharton.upenn.edu/~tcai/) gave us a mathematically fancy method to estimate high dimensional covariance matrix, It's for me more like a mission impossible! Imagine how many parameters you have and how little information you know! (i.e. observations n), plus sparsity pattern, which is our case here) Anyhow, what I do concern is the efficiency when it goes to production. So my next step might be converting a few key (slow) functions to C++.
 
 ***If interested, please check out the source R codes in my [Github](https://github.com/HongleiXie/adaptive-thresholding.git).***
