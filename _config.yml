@@ -7,8 +7,11 @@ paginate_path: "blog/page:num/"
 permalink: blog/:title/
 
 markdown: kramdown
+<<<<<<< HEAD
 redcarpet:
  extensions: ["tables"]
+=======
+>>>>>>> brianmaierjr/master
 highlighter: rouge
 gems: [jekyll-paginate]
 paginate: 5
