@@ -10,7 +10,6 @@ markdown: kramdown
 
 redcarpet:
  extensions: ["tables"]
-=======
 
 highlighter: rouge
 gems: [jekyll-paginate]
