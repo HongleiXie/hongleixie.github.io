@@ -16,7 +16,7 @@ train.data <- cbind(x,y);
 ```
 
 # Heading 1
-<<<<<<< HEAD
+
 =======
 
 ## Heading 2
@@ -28,7 +28,7 @@ train.data <- cbind(x,y);
 ##### Heading 5
 
 ###### Heading 6
->>>>>>> brianmaierjr/master
+
 
 First level header
 ==================
