@@ -51,20 +51,6 @@ goat_door
 
 Simulate the opening of a "goat door" that doesn't contain the prize,
 and is different from the contestants guess
-
-Parameters
-----------
-prizedoors : array
-    The door that the prize is behind in each simulation
-guesses : array
-    THe door that the contestant guessed in each simulation
-
-Returns
--------
-goats : array
-    The goat door (doors -2) that is opened for each simulation. Each item is different
-    from both prizedoors and guesses
-
 """
 def goat_door(prizedoors, guesses):
    out = pd.DataFrame();
@@ -77,26 +63,13 @@ def goat_door(prizedoors, guesses):
             out[t] = [x for x in range(0,doors) if x != prizedoors[t] and x != guesses[t]]
     return out    
   
-      
-
+  
 """
 Function
 --------
 switch_guess
 
 The strategy that always switches a guess after the goat door is opened
-
-Parameters
-----------
-guesses : array
-     Array of original guesses, for each simulation
-goatdoors : array
-     (doors-1)*nsim matrix
-
-Returns
--------
-The new door after switching. Should be different from both guesses and goatdoors
-
 """       
 def switch_guess(guesses, goatdoors):
     result = pd.DataFrame()
