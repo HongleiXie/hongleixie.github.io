@@ -16,6 +16,7 @@ The conclusion is that, yes, switching doors will increase the winning probabili
 MH Probelm Simulation
 @author: Honglei Xie
 """
+
 import numpy as np # imports a fast numerical programming library
 import scipy as sp #imports stats functions, amongst other things
 import matplotlib as mpl # this actually imports matplotlib
@@ -27,21 +28,16 @@ pd.set_option('display.width', 500)
 pd.set_option('display.max_columns', 100)
 pd.set_option('display.notebook_repr_html', True)
 import seaborn as sns #sets up styles and gives us more plotting options
-#import random
-import sys
 
-
-"""
-Set Parameters
-"""
+#Set Parameters
 nsim = 1000 # simulation times
-doors = 10 # >2 integers
+doors = 10 # number of dooors, must be >2 integers
 
 def simulate_prizedoor(nsim):
     return np.random.randint(0, doors, (nsim))
 
 def simulate_guess(nsim):
-    return np.random.randint(0, 100, (nsim))
+    return np.random.randint(0, doors, (nsim))
 
 
 """
@@ -94,8 +90,6 @@ guess = switch_guess(guess, goats)
 print "On the other hand, if switching the win percentage is"
 print win_percentage(prize, guess).mean()
 
-# clear all variables
-#sys.modules[__name__].__dict__.clear() 
 ```
 
 The experiment results are pretty clear now, I tested on 3 doors, which is the original case, the resulting winning probability increased from 31.8% to 69.2% after sitching. When there are more doors, for say, 10 doors, the switching door benefits become more significant, winning probability increases from 10.3% to 89.3%. If we set the doors to be 100, keeping original guess only has 1% chance to get the prize. However, after switching the figure can reach as high as 98.9%.
