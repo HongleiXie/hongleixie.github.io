@@ -6,9 +6,7 @@ date:   2015-12-23
 
 <span class="dropcap">L</span>ast Saturday night I watched a documentary film, *linsanity*, about [Jeremy Lin](https://en.wikipedia.org/wiki/Jeremy_Lin), the model Asian Ameriacian NBA player.
 
-Since there are too many articles analyzing *linsanity* phenomenon and I don't think I'm the right person to talk much about something like asian american struggles in WASP-dominated society, and why people from all over the world are so crazy about him, or  how to make it in NBA .... Most of answers actually can be found in the movie. 
-
-What I'm gonna talk is DREAM and DREAM BIG. From my perspective, I only saw a little boy who were dying for playing basketball and he finally proved to people he can play NBA through his own way. In spite of his asian american identity, he just realized the so-called American Dream.  
+Since there are too many articles analyzing *linsanity* phenomenon and I don't think I'm the right person to talk much about something like asian american struggles in WASP-dominated society, and why people from all over the world are so crazy about him, or  how to make it in NBA .... Most of answers actually can be found in the movie. What I'm gonna talk is DREAM and DREAM BIG. From my perspective, I only saw a little boy who was dying for playing basketball and he finally proved to people he can play NBA through his own way. In spite of his asian american identity, he just realized the so-called American Dream. 
 
 Particularly I was deeply moved by his faith to God and how his mother always unconditionally supported him to play the game which is not usual for an Asian parent.
 
