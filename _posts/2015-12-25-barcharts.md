@@ -4,10 +4,9 @@ title:  "Data Visualizations in R - Bar charts"
 date:   2015-12-25
 ---
 
-<span class="dropcap">I</span>t's my first time intending to give up `ggplot2`, when I saw the amazing(狂霸酷炫拽) plotting galleries using `googleVis` and `rCharts`.
+<span class="dropcap">I</span>t's my first time intending to give up using `ggplot2`, when I saw the amazing(狂霸酷炫拽) plotting galleries using `googleVis` and `rCharts`.
 
-Here is a simple bar charts example. Screenshots of results can be found [here](https://github.com/HongleiXie/hongleixie.github.io/blob/master/assets/img/googlevis_1225.png), [here](https://github.com/HongleiXie/hongleixie.github.io/blob/master/assets/img/rchart_1225.png) and [here](https://github.com/HongleiXie/hongleixie.github.io/blob/master/assets/img/ggplot_1225.png).
-However, I really suggest you to run the codes locally so that you can see the difference clearly.
+I really suggest you to run the codes locally so that you can see the difference clearly.
 
 ### My opinions on selecting the three packages
 
@@ -113,5 +112,5 @@ ggplot(data=data, aes(x=month, y=count, fill=type, ymax = max(count)+1)) +
 </figure>
 --->
 
-Get motivated by the example pages for [`rCharts`](http://rcharts.io/gallery/) and [`googleVis`](https://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html). Don't forget [`ggvis`](http://ggvis.rstudio.com/) as well!
+Get motivated by the example pages for `rCharts` and [`googleVis`](https://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html). Don't forget [`ggvis`](http://ggvis.rstudio.com/) as well!
 
