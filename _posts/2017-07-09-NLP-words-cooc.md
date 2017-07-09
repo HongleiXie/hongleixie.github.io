@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "NLP: Words co-ocurrences"
+title:  "NLP: Words co-ocurrences matrix"
 date:   2017-07-09
 ---
 
@@ -8,14 +8,14 @@ date:   2017-07-09
 OK, no BS anymore, here we go!
 
 ### Why do we need words co-ocurrences matrix?
-Simply speaking, we need words co-ocurrences matrix because the matrix will keep track of the number of times two words occur together. For example, if `mouse = (1,0,...,0)` and `cat = (0,1,0,...,0)`, with the words `cat` and `mouse` appear together in 153 sentences, then the co-occurrences matrix `\(C\)` is such that `\(C(1,2) = C(2,1) = 153\)`. This matrix also plays a fundamental role in converting words to vectors [Word2Vec] (http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
+Simply speaking, we need words co-ocurrences matrix because the matrix will keep track of the number of times two words occur together. For example, if `mouse = (1,0,...,0)` and `cat = (0,1,0,...,0)`, with the words `cat` and `mouse` appear together in 153 sentences, then the co-occurrences matrix `\(C\)` is such that `\(C(1,2) = C(2,1) = 153\)`. This matrix also plays a fundamental role in converting words to vectors [Word2Vec] (https://en.wikipedia.org/wiki/Word2vec)
 
 ### How to do it?
 In most languages there are between 100,000 and 500,000 words. The matrix, therefore, would be *huge* and *sparse*. So this is where math comes to play. The approach, loosely speaking, is to build the best possible approximation for the huge matrix `\(C\)` in a lower dimensional vector space. This is achieved in two steps:
 - Find the Singular Value Decomposition (SVD).
 - Use SVD to find a lower dimensional approximation.
 
-### Quick review of SVD
+### Quick review of Singular Value Decomposition (SVD)
 Any matrix `\(X\)` can be factored as
 $$X = W \Sigma C$$
 where `\(W\)` and `\(C\)` are orthogonal matrices, and `\(\Sigma\)` is a diagonal matrix with non-negative real numbers in the diagonal. Suppose the *rank* of matrix `\(X\)` is `\(m\)`, we only keep the top `\(k, k < m\)` dimensions (corresponding to the `\(k\)` most important singular values) leads to a reduced matrix, with one k-dimensioned row per word.
@@ -151,4 +151,4 @@ You should get the following words in the top of the list:
 Seems be better, isn't it?
 
 ### What's next?
-This is just a very *basic* example demonstrating how to measure words closeness. In practice, the state-of-art method we usually turn to is the so called [Word2Vec] (http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) originally developed by a bunch of scientists in Google. In the next blog post, I will show how to use *Word2Vec* and the pretrained models from [GloVe](https://nlp.stanford.edu/projects/glove/).
+This is just a very *basic* example demonstrating how to measure words closeness. In practice, the state-of-art method we usually turn to is the so called [Word2Vec] (https://en.wikipedia.org/wiki/Word2vec) originally developed by a bunch of scientists in Google. In the next blog post, I will show how to use *Word2Vec* and the pretrained models from [GloVe](https://nlp.stanford.edu/projects/glove/).
