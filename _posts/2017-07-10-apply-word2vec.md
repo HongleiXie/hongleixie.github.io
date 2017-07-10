@@ -4,10 +4,11 @@ title:  "NLP: Get hands dirty with Word2Vec"
 date:   2017-07-10
 ---
 
-<span class="dropcap">L</span>ast time I wrote a [post](http://hongleixie.github.io/blog/NLP-words-cooc/) about words co-ocurrences matrix: basically why do we need it and how to create it, along with taking advantage of SVD to reduce dimensions. In this quick post, I will go directly to the implementations of **Word2Vec** in the package `gensim`. No math, no lengthy formulas, as I believe there are tons of useful resources online regarding the `Skip-Gram Model` and `Continuous Bag-of-Words Model` inside and out. Here is someone's [collection](http://mccormickml.com/2016/04/27/word2vec-resources/) of links and notes, all about **Word2Vec**.
-In the end, let's
+<span class="dropcap">L</span>ast time I wrote a [post](http://hongleixie.github.io/blog/NLP-words-cooc/) about words co-ocurrences matrix: basically why do we need it and how to create it, along with taking advantage of SVD to reduce dimensions. In this quick post, I will go directly to the implementations of **Word2Vec** in the package `gensim`. No math, no lengthy formulas, as I believe there are tons of useful resources online regarding the `Skip-Gram Model` and `Continuous Bag-of-Words Model` inside and out. Here is someone's [collection](http://mccormickml.com/2016/04/27/word2vec-resources/) of links and notes, all about **Word2Vec**. That's why this post is only focusing on getting some hands-on practice in **Word2Vec**.
 
-### Word2Vec implementations in `gensim`
+
+### Word2Vec implementations
+
 **Word2Vec** is part of the `gensim` package, and it is only one of many possible embeddings. You can find the documentation [here](https://radimrehurek.com/gensim/models/word2vec.html)
 
 ```python
