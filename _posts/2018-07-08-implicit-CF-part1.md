@@ -79,11 +79,12 @@ Similarly,
 ### Experimental study
 #### Set-up
 - `\(r_{ui}\)` is denoted as, for each user `\(u\)` and show `\(i\)`, how many times user `\(u\)` watched show `\(i\)` (related is the number of minutes that a given show was watched --- for all of our analysis we focus on show length based units).
-- Testing dataset is constructed as all channel tune events during the single week following a 4-week training period. And for each user they removed the “easy” predictions from the test set corresponding to the shows that had been watched by that user during the training period. Also, they filtered out all entries with `\(r^{t}_{ui} < 0.5)` as watching less than half of a show is not a strong indication that a user likes the show (really??).
+- Testing dataset is constructed as all channel tune events during the single week following a 4-week training period. And for each user they removed the “easy” predictions from the test set corresponding to the shows that had been watched by that user during the training period. Also, they filtered out all entries with `\(r^{t}_{ui} < 0.5\)` as watching less than half of a show is not a strong indication that a user likes the show (really??).
 - Since `\(r_{ui}\)` tends to vary significantly over a large range, so they applied
-$$
+`\[
 c_{ui} = 1 + 40\times log(1 + r_{ui}/10^{-8})
-$$
+\]`
+
 - They adjusted the _momentum effect_ by for the `\(t\)`-th show after a channel tune, we assign it assigning it a weighting `\(\frac{e^{-(2t-6)}}{1+e^{-(2t-6)}}\)`.
 
 #### Evaluation
