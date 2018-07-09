@@ -3,7 +3,7 @@ layout: post
 title: "Recommendation Systems for Implicit Feedback Dataset - Part 1"
 date: 2018-07-08
 ---
-<span class="dropcap">I</span> am going to write a series of _non-comprehensive_ paper reviews associated with some simple quick Python implementations regarding the recommendation systems for **implicit** feedback datasets. The choice of papers being reviewed is purely at my research interests discretion. Also, I have a keen interest in developing and/or contributing the *Spark* implementations under the big data context. Feel free to reach out to me if you have the same passion or know any relevant projects that are under-going. Open-source, of course.
+<span class="dropcap">I</span> am going to write a series of _non-comprehensive_ paper reviews for the recommendation systems for **implicit** feedback datasets, associated with some simple quick Python implementations. The choice of papers being reviewed is purely at my research interests discretion. Also, I have a keen interest in developing and/or contributing to the *Spark* implementations under the big data context. Feel free to reach out to me if you have the same passion or know any relevant projects that are under-going. Open-source, of course.
 
 ### Navigations
 - [**Part 1:**](http://hongleixie.github.io/blog/implicit-CF-part1/) Hu, Yifan, Yehuda Koren, and Chris Volinsky. "Collaborative filtering for implicit feedback datasets." _Data Mining, 2008. ICDM'08. Eighth IEEE International Conference on_. Ieee, 2008.
@@ -19,7 +19,7 @@ date: 2018-07-08
 
 ### Explicit v.s. Implicit feedback
 What's the main distinctions between explicit and implicit-feedback recommenders? Why do we have to address the two types of recommenders differently?
-- Explicit feedback includes explicit input by users regarding their interest in products. For example, the 5-star rating in Netflix or Amazon.
+- Explicit feedback includes explicit input by users regarding their interest in products. For example, the 5-star rating system in Amazon.
 - Implicit feedback, which indirectly reflects opinion through observing user behavior, includes purchase history, browsing history, search patterns, watching habits etc.
 - What's the features of _implicit feedback_?
 - **No negative feedback.** For example, a user that did not watch a certain show might have done so because she dislikes the show or just because she did not know about the show or was not available to watch it. This fundamental asymmetry does not exist in explicit feedback where users tell us both what they like and what they dislike.
@@ -49,20 +49,20 @@ This paper borrowed this approach to implicit feedback datasets, with modificati
 I will intended omit the rationale behind the formulation that you can find in the original paper.
 #### Some notations
 Let's denote the _preference_ of user `\(u\)` to item `\(i\)` by `\(p_{ui}\)`
-$$
+`\[
 p_{ui} = \begin{cases}
   1, & r_{ui} > 0, \\
   0, & {r_{ui}=0}
 \end{cases}
-$$
+\]`
 And `\(c_{ui}\)` measures the confidence in observing `\(p_{ui}\)`. The authors suggested two forms of choices of `\(c_{ui}\)`
-$$
+`\[
 c_{ui} = 1 + \alpha r_{ui}
-$$
+\]`
 or
-$$
+`\[
 c_{ui} = 1 + \alpha log(1 + r_{ui}/\epsilon)
-$$
+\]`
 In general, as `\(r_{ui}\)` grows, we have a stronger indication that the user indeed likes the item. The rate of increase is controlled by the constant `\(\alpha\)`.  In their experiments, setting `\(\alpha = 40\)` was found to produce good results.
 
 #### Loss function
@@ -80,20 +80,31 @@ Similarly,
 #### Set-up
 - `\(r_{ui}\)` is denoted as, for each user `\(u\)` and show `\(i\)`, how many times user `\(u\)` watched show `\(i\)` (related is the number of minutes that a given show was watched --- for all of our analysis we focus on show length based units).
 - Testing dataset is constructed as all channel tune events during the single week following a 4-week training period. And for each user they removed the “easy” predictions from the test set corresponding to the shows that had been watched by that user during the training period. Also, they filtered out all entries with `\(r^{t}_{ui} < 0.5)` as watching less than half of a show is not a strong indication that a user likes the show (really??).
-- Since `\(r_{ui}\)` tends to vary significantly over a large range, so they applied `\(c_{ui} = 1 + 40\times log(1 + r_{ui}/10^{-8}))`
+- Since `\(r_{ui}\)` tends to vary significantly over a large range, so they applied
+$$
+c_{ui} = 1 + 40\times log(1 + r_{ui}/10^{-8})
+$$
 - They adjusted the _momentum effect_ by for the `\(t\)`-th show after a channel tune, we assign it assigning it a weighting `\(\frac{e^{-(2t-6)}}{1+e^{-(2t-6)}}\)`.
 
 #### Evaluation
+
 *Notations*
+
 We denote `\(Rank_{ui}\)` as the percentile-ranking of show `\(i\)` within the ordered list of all programs prepared for user `\(u\)`.
 So `\(Rank_{ui} = 0\%\)` would mean that show `\(i\)` is predicted to be the **most desirable** for user `\(u\)` while `\(Rank_{ui} = 100\%\)` indicates that show `\(i\)` is predicted to be the **least preferred** for user `\(u\)`, thus placed at the end of the list.
-$$
+
+`\[
 \overline{Rank} = \frac{\sum\limits_{u,i } r^{t}_{ui} Rank_{ui}}{\sum\limits_{u,i } r^{t}_{ui}}
-$$
+\]`
+
 Lower values of rank are more desirable, with 50% as the random guessing.
+
 *Results*
+
 To sum up:
-- If you want to implement item-based neighborhood methods, try to **(1)** Take all items as “neighbors”, not only a small subset of most similar items. **(2)** Use cosine similarity function.
+- If you want to implement item-based neighborhood methods, try to
+  **(1)** Take all items as “neighbors”, not only a small subset of most similar items.
+  **(2)** Use cosine similarity function.
 - Quality of the recommendations can be measured by studying the cumulative distribution function of `\(Rank_{ui}\)`. So what is the distribution of percentiles for the shows that were actually watched in the test set? If the model does well, all of the watched shows will have low percentiles. From the reported figure, we see that a watched show is in the top 1% of the recommendations from the model about 27% of the time.
 - Results get much better had they left all previously watched programs in the test set (without removing all user-program events that already occurred in the training period).
 - The model becomes much easier to predict popular programs, while it is increasingly difficult to predict watching a non popular show. The similar observations cannot be found in the user side though.
@@ -101,3 +112,4 @@ To sum up:
 - A possible extension of the model –-- adding a dynamic time variable addressing the tendency of a user to watch TV on certain times.
 
 ### A simple Python implementation
+TBA
