@@ -3,14 +3,12 @@ layout: post
 title: "Recommendation Systems for Implicit Feedback Dataset - Part 1"
 date: 2018-07-08
 ---
-<span class="dropcap">T</span> his is the first of a series of _non-comprehensive_ paper reviews for the recommendation systems for **implicit** feedback datasets, associated with some simple quick Python implementations. The choice of papers being reviewed is purely at my interests discretion. Also, I have a keen interest in developing and/or contributing to the *Spark* implementations under the big data context. Feel free to reach out to me if you have the same passion or know any relevant projects that are under-going. Open-source, of course.
+<span class="dropcap">T</span> his is the first of a series of _non-comprehensive_ paper reviews for the recommendation systems for **implicit** feedback datasets.
 
 ### Navigations
 - [**Part 1:**](http://hongleixie.github.io/blog/implicit-CF-part1/) Hu, Yifan, Yehuda Koren, and Chris Volinsky. "Collaborative filtering for implicit feedback datasets." _Data Mining, 2008. ICDM'08. Eighth IEEE International Conference on_. Ieee, 2008.
-- **Part 2:** Johnson, Christopher C. "Logistic matrix factorization for implicit feedback data." _Advances in Neural Information Processing Systems_ 27 (2014).
-- **Part 3:** Liang, Dawen, et al. "Variational Autoencoders for Collaborative Filtering." _arXiv preprint arXiv:1802.05814_(2018).
+- **Part 2:** Liang, Dawen, et al. "Variational Autoencoders for Collaborative Filtering." _arXiv preprint arXiv:1802.05814_(2018).
 
- To be added more going-forward ....
 
 ### Collaborative filtering for implicit feedback datasets: High-level summary
 - Although the classic, elegantly-written paper has been published for nearly 10 years, it still enjoys high-citation until now as it's one of the first papers introducing latent factor algorithm which is especially tailored to implicit feedback recommenders.
@@ -67,7 +65,7 @@ The intuition behind the formula is that with the increasing of `\(r_{ui}\)`, we
 
 #### Loss function
 The loss function is similar to matrix factorization techniques which are popular for explicit feedback data, with two important distinctions:
-- We need to account for the varying confidence levels
+- We need to account for the varying confidence levels by introducing $c_{ui}$. Also the authors argued that transferring the raw observations $r_{ui}$ into two separate magnitudes with distinct interpretations: preferences and confidence levels is essential to improving accuracy.
 - Optimization should account for all possible `\(u, i\)` pairs, rather than only those corresponding to observed data. So it prevents stochastic gradient descent due to the insane computation complexity. Alternating-least-squares (ALS) optimization process was applied in the experiment study.
 $$
 L = \sum\limits_{u,i } c_{ui}(p_{ui} - \textbf{x}_{u}^{\intercal} \cdot{} \textbf{y}_{i})^{2} + \lambda (\sum\limits_{u} \left\Vert \textbf{x}_{u} \right\Vert^{2} + \sum\limits_{i} \left\Vert \textbf{y}_{i} \right\Vert^{2})
@@ -77,15 +75,17 @@ $$
 ### Experimental study
 #### Set-up
 - `\(r_{ui}\)` is denoted as, for each user `\(u\)` and show `\(i\)`, how many times user `\(u\)` watched show `\(i\)` (related is the number of minutes that a given show was watched --- for all of our analysis we focus on show length based units).
-- Testing dataset is constructed as all channel tune events during the single week following a 4-week training period. And for each user they removed the “easy” predictions from the test set corresponding to the shows that had been watched by that user during the training period. Also, they filtered out all entries with `\(r^{t}_{ui} < 0.5\)` as watching less than half of a show is not a strong indication that a user likes the show (really??).
+- Testing dataset is constructed as all channel tune events during the single week following a 4-week training period. And for each user they removed the “easy” predictions from the test set corresponding to the shows that had been watched by that user during the training period. Also, they filtered out all entries with `\(r^{t}_{ui} < 0.5\)` as watching less than half of a show is not a strong indication that a user likes the show.
 - Since `\(r_{ui}\)` tends to vary significantly over a large range, so they applied
 `\[
 c_{ui} = 1 + 40\times log(1 + r_{ui}/10^{-8})
 \]`
 
-- They adjusted the _momentum effect_ by for the `\(t\)`-th show after a channel tune, we assign it assigning it a weighting `\(\frac{e^{-(2t-6)}}{1+e^{-(2t-6)}}\)`.
+- They adjusted the _momentum effect_ by for the `\(t\)`-th show after a channel tune, we assign it assigning it a weighting `\(\frac{e^{-(2t-6)}}{1+e^{-(2t-6)}}\)`. To do this, it requires that we need to map every tuning session into a particular show.
 
 #### Evaluation
+Essentially, we need to see if the order of recommendations given for each user matches the items they ended up consumed (whether purchasing or watching). Particularly in this use case, the authors also argued that precision based metrics are not very appropriate, as they require knowing which shows are undesired to a user. However, we don't have such data as not watching a show can stem from multiple reasons. While watching a show is an indication of liking it, making recall based metrics applicable.
+BTW, I also noticed that some [people](https://jessesw.com/Rec-System/) also used AUC to evaluate the recommender system.
 
 *Notations*
 
@@ -110,5 +110,13 @@ To sum up:
 - Train the model under the **full** loss function.
 - A possible extension of the model –-- adding a dynamic time variable addressing the tendency of a user to watch TV on certain times.
 
-### A simple Python implementation
-TBA
+### Just a few lines of Python implementation
+```python
+import implicit
+alpha=40 #as suggested by the paper
+user_vecs,item_vecs=implicit.alternating_least_squares((train_data*alpha).astype('double'),
+                                                          factors=20,
+                                                          regularization = 0.1,
+                                                          iterations = 50)
+full_matrix=item_vecs.dot(user_vecs.T) #predicted r_{ui}                                              
+```
