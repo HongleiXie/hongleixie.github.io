@@ -65,7 +65,7 @@ The intuition behind the formula is that with the increasing of `\(r_{ui}\)`, we
 
 #### Loss function
 The loss function is similar to matrix factorization techniques which are popular for explicit feedback data, with two important distinctions:
-- We need to account for the varying confidence levels by introducing $c_{ui}$. Also the authors argued that transferring the raw observations $r_{ui}$ into two separate magnitudes with distinct interpretations: preferences and confidence levels is essential to improving accuracy.
+- We need to account for the varying confidence levels by introducing `\(c_{ui}\)`. Also the authors argued that transferring the raw observations `\(r_{ui}\)` into two separate magnitudes with distinct interpretations: preferences and confidence levels is essential to improving accuracy.
 - Optimization should account for all possible `\(u, i\)` pairs, rather than only those corresponding to observed data. So it prevents stochastic gradient descent due to the insane computation complexity. Alternating-least-squares (ALS) optimization process was applied in the experiment study.
 $$
 L = \sum\limits_{u,i } c_{ui}(p_{ui} - \textbf{x}_{u}^{\intercal} \cdot{} \textbf{y}_{i})^{2} + \lambda (\sum\limits_{u} \left\Vert \textbf{x}_{u} \right\Vert^{2} + \sum\limits_{i} \left\Vert \textbf{y}_{i} \right\Vert^{2})
@@ -113,10 +113,10 @@ To sum up:
 ### Just a few lines of Python implementation
 ```python
 import implicit
-alpha=40 #as suggested by the paper
-user_vecs,item_vecs=implicit.alternating_least_squares((train_data*alpha).astype('double'),
-                                                          factors=20,
+alpha = 40 #as suggested by the paper
+user_vecs,item_vecs = implicit.alternating_least_squares((train_data*alpha).astype('double'),
+                                                          factors = 20,
                                                           regularization = 0.1,
                                                           iterations = 50)
-full_matrix=item_vecs.dot(user_vecs.T) #predicted r_{ui}                                              
+full_matrix = item_vecs.dot(user_vecs.T) #predicted r_{ui}                                              
 ```
