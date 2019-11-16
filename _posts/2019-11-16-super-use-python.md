@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Super()在Python中的用法"
+title: "Super 在Python中的用法"
 date: 2019-11-16
 ---
 <span class="dropcap">经</span>常在别人的code里面看到`super`，但是一直不太清楚具体的用法，官方的[文档](https://docs.python.org/3/library/functions.html#super)非常technical，于是在网上找到一个还不错的[资源](https://realpython.com/python-super/)，终于有了点眉目。这篇post主要是根据我自己的理解重新阐述（翻译）一遍原资源的takeaways以防日后我又忘了的时候可以马上记起来。
@@ -76,7 +76,7 @@ cube.volume()
 27
 ```
 `Cube`这个类通过`Square`继承了`Rectangle`里面的方法`area`。相当于`super()`创建了一个父类（也就是 `Rectangle`）的一个instance。
-注意`Cube`类里面没有定义`.__init__()` 因为`Cube`从`Square`那里继承了`.__init__()`。而且`Cube`也不需要特别的`.__init__()`所以就可以不用定义了。另一个用`Super`的好处还有：如果你想改一些基本的method（比如`area`），你可以直接在父类里面改，不用在每一个子类里面改。
+注意`Cube`类里面没有定义`.__init__()` 因为`Cube`从`Square`那里继承了`.__init__()`。而且`Cube`也不需要特别的`.__init__()`所以就可以不用定义了。另一个用`Super`的好处还有：如果你想改一些基本的method（比如`area`）你可以直接在父类里面改，不用在每一个子类里面改。
 
 ## Parameters in `Super`
 `super()` can also take two parameters: the first is the subclass, and the second parameter is an object that is an instance of that subclass.
@@ -134,7 +134,7 @@ class RightPyramid(Triangle, Square):
         perimeter = super().perimeter()
         return 0.5 * perimeter * self.slant_height + base_area
 ```
-为什么呢？我们来看看Method Resolution Order (or **MRO**)
+为什么呢？我们来看看Method Resolution Order (**MRO**)
 
 ```python
 RightPyramid.__mro__
