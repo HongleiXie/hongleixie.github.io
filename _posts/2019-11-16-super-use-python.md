@@ -110,7 +110,7 @@ class Cube(Square):
         return face_area * self.length
 
 ```
-这样直接写出来`super`的参数有什么好吃呢？在这个例子里面我们设置`Square`作为`super`的参数，这使得只会在`Square`高一个level的class（i.e. `Rectangle`) 寻找methods（e.g. `area()`）。如果说我们在`Square`里面也定义了一个新的`area()`method 但是不想让`Cube`用，我们只想让`Cube`用`Rectangle`里面定义的`area()` method，这样写就可以实现这一点。
+这样直接写出来`super`的参数有什么好处呢？在这个例子里面我们设置`Square`作为`super`的参数，这使得只会在`Square`高一个level的class（i.e. `Rectangle`) 寻找methods（e.g. `area`）。如果说我们在`Square`里面也定义了一个新的`area`method 但是不想让`Cube`用，我们只想让`Cube`用`Rectangle`里面定义的`area()` method，这样写就可以实现这一点。
 
 
 ## Multiple Inheritance
@@ -144,7 +144,7 @@ RightPyramid.__mro__
 ```
 由此可见MRO是由左到右开始寻找。
 
-作者建议为了可读性出发用`mixin` class优化code:
+作者建议为了可读性出发用`mixin` 优化code:
 ```python
 class Rectangle:
     def __init__(self, length, width):
