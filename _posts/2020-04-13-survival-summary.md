@@ -90,10 +90,14 @@ Cox proportional hazards regression is a model to estimate the hazard rate `\(h(
 \]`
 #### Assumptions
 Notice that there is no time index inside the partial hazard. A fundamental assumption behind the CoxPH model is that **hazards can change over time, but their ratio between levels remains a constant and the effects of the predictors are additive in one scale**, i.e. the hazard functions for any two subjects at any point in time are *proportional*.
+
 #### How to check the proportional hazard assumption
 First question worth asking: do you really care about the PH assumption? Often you probably don't because your goal is to maximize some score and you don't care how the predictions get generated.
 Nevertheless, a good starting point is to rely on some graphical tool such as _scaled Schoenfeld residuals_ against time plot. Ideally the line is flat indicating the PH assumption meets.
-
+<figure>
+    <img src="{{ '/assets/img/20200413_residuals.png' | prepend: site.baseurl }}" alt="">
+    <figcaption>An example of the scaled Schoenfeld residuals</figcaption>
+</figure>
 #### How to interpret the coefficients?
 Recall the `\(exp(\text{coeff})\)` is the ratio of hazard associated with one unit change of covariate.
 
