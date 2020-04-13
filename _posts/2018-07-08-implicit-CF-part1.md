@@ -3,7 +3,7 @@ layout: post
 title: "Recommendation Systems for Implicit Feedback Dataset - Part 1"
 date: 2018-07-08
 ---
-<span class="dropcap">T</span> his is the first of a series of _non-comprehensive_ paper reviews for the recommendation systems for **implicit** feedback datasets.
+<span class="dropcap">T</span>his is the first of a series of _non-comprehensive_ paper reviews for the recommendation systems for **implicit** feedback datasets.
 
 ### Navigations
 - [**Part 1:**](http://hongleixie.github.io/blog/implicit-CF-part1/) Hu, Yifan, Yehuda Koren, and Chris Volinsky. "Collaborative filtering for implicit feedback datasets." _Data Mining, 2008. ICDM'08. Eighth IEEE International Conference on_. Ieee, 2008.
