@@ -74,7 +74,7 @@ Nelson Aalen estimator is an non-parametric estimator of the _cumulative_ hazard
 Why do we care about it? Because the sum of estimates is much more stable than the point-wise estimates.
 
 ### Weibull model
-Another method, but parametric, to estimate the _cumulative_ hazard function. It assumes:
+Another univariate method, but parametric, to estimate the _cumulative_ hazard function. It assumes:
 `\[
 S(t) = \exp\left(-\left(\frac{t}{\lambda}\right)^\rho\right), \lambda >0, \rho > 0
 \]`
@@ -82,7 +82,7 @@ Therefore
 `\[
 H(t) = \left(\frac{t}{\lambda}\right)^\rho
 \]`
-Similarly, we also can also consider Exponential model or Gamma model.
+Similarly, we can also consider Exponential model or Gamma model.
 
 ### CoxPH model
 Cox proportional hazards regression is a model to estimate the hazard rate `\(h(t|x)\)` by a function of `\(t\)` and some covariates `\(x\)` (i.e. features in machine learning terminology). Since its introduction in 1972, it has been the default method for survival analysis in randomized trials.
