@@ -45,6 +45,11 @@ The survival probability at any particular time `\(t\)` is calculated as follows
 \]`
 where `\(t_i\)` is a duration of study at point `\(i\)`, `\(d_i\)` is number of deaths up to point `\(i\)` and `\(n_i\)` is number of individuals **at risk** just prior to `\(t_i\)`. Subjects who have died, dropped out, or move out are not counted as "at risk".
 `\(S\)` is based upon the probability that an individual survives at the end of a time interval, on the condition that the individual was present at the start of the time interval. `\(S\)` is the product of these conditional probabilities. For example, the probability of a patient surviving two days after can be considered to be probability of surviving the one day multiplied by the probability surviving the second day given that patient survived the first day.
+<figure>
+    <img src="{{ '/assets/img/20200413_km_curve.png' | prepend: site.baseurl }}" alt="">
+    <figcaption>An example of Kaplan-Meier survival curve</figcaption>
+</figure>
+
 ### Log-rank test
 Let's talk about statistical significance, p-values and confidence intervals as they are statisticians' favorite topics :)
 We can compare K-M curves for two different groups of subjects and establish a statistical test on two groups' hazard functions.
@@ -55,6 +60,10 @@ Dropping the time index for the sake of simplicity, in log-rank test we calculat
 
 `\(\text{log-rank statistic} = \frac{O_1-E_1}{E_1} + \frac{O_2-E_2}{E_2}\)`.
 Under the null hypothesis and large sample size, the above statistic follows the standard normal distribution by the central limit theorem (CLT).
+<figure>
+    <img src="{{ '/assets/img/20200413_log_rank' | prepend: site.baseurl }}" alt="">
+    <figcaption>Comparing two groups</figcaption>
+</figure>
 
 ### Nelson Aalen estimator
 Nelson Aalen estimator is an non-parametric estimator of the _cumulative_ hazard function:
