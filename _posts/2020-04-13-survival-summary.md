@@ -62,7 +62,7 @@ Dropping the time index for the sake of simplicity, in log-rank test we calculat
 `\(\text{log-rank statistic} = \frac{O_1-E_1}{E_1} + \frac{O_2-E_2}{E_2}\)`.
 Under the null hypothesis and large sample size, the above statistic follows the standard normal distribution by the central limit theorem (CLT).
 <figure>
-    <img src="{{ '/assets/img/20200413_log_rank' | prepend: site.baseurl }}" alt="">
+    <img src="{{ '/assets/img/20200413_log_rank.png' | prepend: site.baseurl }}" alt="">
     <figcaption>Comparing two groups</figcaption>
 </figure>
 
