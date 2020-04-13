@@ -3,7 +3,7 @@ layout: post
 title: "Summary of survival analysis"
 date: 2020-04-13
 ---
-<span class="dropcap">T</span>here is no better topic than _survival_ in 2020 :sweat_smile: 
+<span class="dropcap">T</span>here is no better topic than _survival_ in 2020.
 It has been 6 years since last time I sat at [Prof. Richard Cook]([http://www.math.uwaterloo.ca/~rjcook/index.html](http://www.math.uwaterloo.ca/~rjcook/index.html))'s *STAT 935: The Analysis of Survival Data* class at UWaterloo, struggling with the maximum likelihood function in CoxPH model. Thanks to a recent project at work, I finally got an opportunity refreshing my memories.
 
 Survival analysis, not getting as much attention as *deep learning* these days, is arguably one of the most important statistical techniques in the pharmaceutical industry. Survival analysis is used to analyze data where the **time to event** is of interest. The most common application is to estimate the *5-year-survival rate* which is a type of survival rate for estimating the prognosis of a particular disease. Traditionally it was also used to measure lifespans of individuals despite it actually can be applied to any *duration-related* problems. For example, what's the expected duration between the user subscribing to a service and then left. Another example is how long does the relationship last: a *birth* is then people to start to date, and a *death* is when they break up or divorce.
