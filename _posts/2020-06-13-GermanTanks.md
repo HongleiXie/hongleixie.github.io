@@ -4,7 +4,7 @@ title: "German Tank Problem Explained"
 date: 2020-06-13
 ---
 
-<span class="dropcap">R</span>ecently I randomly listened to a podcast talking about how statisticians estimate the German monthly tank production numbers during World War II which I found [it]([https://en.wikipedia.org/wiki/German_tank_problem](https://en.wikipedia.org/wiki/German_tank_problem)) super interesting. The number of tanks production has been a classified information during World War II as it may reveal the real military strength (of course no one cares about the number of tanks now); thus it motivated the statisticians to estimate the true German tank production numbers based on the the number of seized tanks by the allied forces.
+<span class="dropcap">R</span>ecently I randomly listened to a podcast talking about how statisticians estimate the German monthly tank production numbers during World War II which I found [it](https://en.wikipedia.org/wiki/German_tank_problem](https://en.wikipedia.org/wiki/German_tank_problem) super interesting. The number of tanks production has been a classified information during World War II as it may reveal the real military strength (of course no one cares about the number of tanks now); thus it motivated the statisticians to estimate the true German tank production numbers based on the the number of seized tanks by the allied forces.
 ## Problem
 Every captured tank has a serial number on it and if we assume the rigorous German have manufactured a series of tanks marked with consecutive whole numbers, beginning with serial number 1. Additionally it's also presumed that the distribution over serial numbers becoming revealed is **uniform**. Let's say we randomly sampled `\(k\)` numbers without replacement where the maximum serial number is `\(m\)`. We are interested in the population maximum number `\(N\)`.
 For example, we captured the tanks with the following serial numbers: (10, 9, 25) so the  `\(k = 3\)` and  `\(m = 25\)`
@@ -35,7 +35,7 @@ Frequentist is good but boring, and sometime lack important perspectives on unce
 Given the uniform distribution assumption, `\(p(X=a|N) = \frac{1}{n} \mathbb I( 0< a \leq n)\)`
 
 ### Prior distribution
-It's crucial to define a prior distribution in Bayesian analysis. So what's the suitable form of prior in this case? We normally choose the [conjugate prior]([https://en.wikipedia.org/wiki/Conjugate_prior](https://en.wikipedia.org/wiki/Conjugate_prior)) to massively simplify the computations. The conjugate prior of an uniform distribution is [*Pareto distribution*]([https://en.wikipedia.org/wiki/Pareto_distribution](https://en.wikipedia.org/wiki/Pareto_distribution)) which is widely used to describe the "long tail" or "power law" (known as "80-20 rule").
+It's crucial to define a prior distribution in Bayesian analysis. So what's the suitable form of prior in this case? We normally choose the [conjugate prior](https://en.wikipedia.org/wiki/Conjugate_prior) to massively simplify the computations. The conjugate prior of an uniform distribution is [*Pareto distribution*](https://en.wikipedia.org/wiki/Pareto_distribution](https://en.wikipedia.org/wiki/Pareto_distribution) which is widely used to describe the "long tail" or "power law" (known as "80-20 rule").
 
 `\[
 p(n) = Pareto(N; m, K)=\frac{Km^K}{N^{K+1}}\mathbb I(N \geq m).
