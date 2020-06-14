@@ -31,10 +31,10 @@ indicating we just need to estimate `\(\mu_M\)` and we are done! Since we have d
 The population maximum equals to the sample maximum plus the average distance between each observed numbers. The  interpretation is pretty intuitive, given the uniformity the *best* guess of the distance between population maximum and sample maximum is the average distance between sampled numbers.
 
 ## Bayesian point of view
-Frequentist is good but boring, and sometime lack important perspectives on uncertainty. I found the Bayesian point of view might be a better solution to this problem. If we have observed a number `\(a\)`, what can it tell me about `\(N\)`?
+Frequentist is good but boring, and sometime lack important perspectives on uncertainty. I found the Bayesian point of view might be a better solution to this problem. If we have observed a number `\(a\)`, what can it tell me about `\(N\)`? Furthermore, if additional numbers are revealed, how do we sequentially *update* our estimation of `\(N\)`? From Bayesian point of view, the model parameters are never fixed (same as people's perspectives towards uncertainties), along with more data is being collected.
 
 ### Likelihood function
-Given the uniform distribution assumption, `\(p(X=a|N) = \frac{1}{n} \mathbb I( 0< a \leq n)\)` where `\(\mathbb I(\dot) \)` is the indicator function, taking the value 1 if the condition meets otherwise 0.
+Given the uniform distribution assumption, `\(p(X=a|N) = \frac{1}{n} \mathbb I( 0< a \leq n)\)` where `\(\mathbb I() \)` is the indicator function, taking the value 1 if the condition meets otherwise 0.
 
 ### Prior distribution
 It's crucial to define a prior distribution in Bayesian analysis. So what's the suitable form of prior in this case? We normally choose the [conjugate prior](https://en.wikipedia.org/wiki/Conjugate_prior) to massively simplify the computations. The conjugate prior of an uniform distribution is [*Pareto distribution*](https://en.wikipedia.org/wiki/Pareto_distribution) which is widely used to describe the "long tail" or "power law".
