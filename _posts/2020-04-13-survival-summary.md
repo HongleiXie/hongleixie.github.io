@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Summary of survival analysis"
+title: "Summary of Survival Analysis"
 date: 2020-04-13
 ---
 <span class="dropcap">T</span>here is no better topic than _survival_ in 2020.
