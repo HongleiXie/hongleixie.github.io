@@ -110,12 +110,11 @@ There are two ways to launch the web application. One way is to simply run `pyth
 And open the browser `http://0.0.0.0:5000/`. Hopefully if everything goes smoothly, you would see the following web page:
 <figure>
     <img src="{{ '/assets/img/20200728_web.png' | prepend: site.baseurl }}" alt="">
-    <figcaption>Minimalist webpage</figcaption>
 </figure>
 After I fill in the forms and click `Get Prediction`, ideally you will see a plain page with a capital letter, either M or B, returned to you.
 
 #### Docker
-The second way, which is to launch the application through Docker, is preferable because Docker’s containerization makes the deployment more scalable, reproducible and portable.
+The other way, which is to launch the application through Docker, is preferable because Docker’s containerization makes the deployment more scalable, reproducible and portable.
 <figure>
     <img src="{{ '/assets/img/20200728_docker_overview.png' | prepend: site.baseurl }}" alt="">
 </figure>
