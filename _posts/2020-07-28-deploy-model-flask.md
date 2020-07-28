@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Deploying production ML models with Flask and Docker easily "
+title: "Deploy ML Models with Flask and Docker Easily "
 date: 2020-07-28
 ---
 
