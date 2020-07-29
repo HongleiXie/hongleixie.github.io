@@ -9,9 +9,9 @@ date: 2020-07-28
 ### Big picture
 Assume you are tasked to predict the diagnosis of breast tissues (**M** = malignant, **B** = benign) based on the characteristics of the cell nuclei present in the image of a fine needle aspirate (FNA) of a breast mass. It's a very easy binary classification task so we just use this toy example to illustrate the end-to-end ML model life cycle, with the focus on model deployment.
 Data Scientists usually start with exploring the dataset in a notebook environment as the interactive nature greatly speeds up the prototyping and exploration. After a number of iterations, we are finally happy with the model and save it in the disk.
-Now the remaining problem is how to make the pre-trained model useful to the end-point users? i.e. the clinicians who have a new set of characteristics of the image and they want to know how whether the corresponding breast tissue is malignant or benign. They don't work with Python or ML so let's take them to a web application where they simply fill in the forms and get the prediction at their fingertips.
+Now the remaining problem is how to make the pre-trained model useful to the end-point users? i.e. the clinicians who have a set of characteristics of the image of a new patient and they want to know whether the corresponding breast tissue is malignant or benign. They don't usually work with Python or ML so let's take them to a web application where the only thing to do is to fill in the forms and get the prediction at fingertips.
 ### Model training
-Model training usually happens offline with the exception of some online learning system such as Reinforcement Learning. In this tutorial, I will skip the process how I reached to the final model since it's not the focus of this tutorial. Instead, what's really matters is the model pipeline which is shown below. BTW, in the latest `scikit-learn >= 0.21` we are able to visualize the pipeline object in diagram. I didn't go over the formal feature selection procedure for the sake of simplicity, instead, 4 features were manually selected. 
+Model training usually happens offline with the exception of some online learning systems such as Reinforcement Learning. In this tutorial, I will skip the process as to how I reached to the final model since it's not the focus of this tutorial. Instead, what's really matters is the model pipeline. BTW, in the latest `scikit-learn>=0.21` we are able to visualize the pipeline object in diagram. I didn't go over the formal feature selection procedure for the sake of simplicity, instead, 4 features were manually selected. 
 Check out the data exploration and other model details such as features importance [here](https://github.com/HongleiXie/breast-cancer-API/blob/master/application/model_offline_training.ipynb)
 
 <figure>
@@ -78,7 +78,7 @@ First of all, we need to load the saved pipeline.
 pipe = pickle.load(open('pipe.pkl','rb'))
 feature_cols = ['radius_mean', 'texture_mean', 'smoothness_mean', 'compactness_mean']
 ```
-Now we are going to access the `input_data` collected via the web service by `request` object. We converted to `pd.dataframe`  to be consistent with the pipeline's `predict` and `transform` input arguments. `numpy.array` should be also fine. Lastly, the function returns the predicted breast cancer type either **M** = malignant or **B** = benign.
+Now we are going to access the `input_data` collected by `request` object. We converted to `pd.dataframe`  to be consistent with the pipeline's `predict` and `transform` input arguments. `numpy.array` should be also fine. Lastly, the function returns the predicted breast cancer type either **M** = malignant or **B** = benign.
 Note that the return type must be a string, dict, tuple, Response instance, or WSGI callable.
 
 ```python
@@ -111,10 +111,10 @@ And open the browser `http://0.0.0.0:5000/`. Hopefully if everything goes smooth
 <figure>
     <img src="{{ '/assets/img/20200728_web.png' | prepend: site.baseurl }}" alt="">
 </figure>
-After I fill in the forms and click `Get Prediction`, ideally you will see a plain page with a capital letter, either M or B, returned to you.
+After you fill in the forms and click `Get Prediction`, ideally you will see a plain page with a capital letter, either M or B, returned to you.
 
 #### Docker
-The other way, which is to launch the application through Docker, is preferable because Docker’s containerization makes the deployment more scalable, reproducible and portable.
+The other way, which is to launch the application through Docker, is *preferable* because Docker’s containerization makes the deployment more scalable, reproducible and portable.
 <figure>
     <img src="{{ '/assets/img/20200728_docker_overview.png' | prepend: site.baseurl }}" alt="">
 </figure>
