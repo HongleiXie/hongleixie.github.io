@@ -21,9 +21,6 @@ Although many bandit algorithms mentioned above do not consider constraints in t
 - Another strategy is to choose the best arm in each round with the probability `\(\rho = (b_\tau / \tau)\)`.
 - There is a more advanced resource allocation method such as the **UCB-ALP** [4], an adaptive dynamic linear programming (LP) method to solve for the constrained contextual bandit problems and use the UCB methods to estimate the expected rewards which are needed in the LP solution. We are interested in the asymptotic regime where the time-horizon `\(T\)` and the budget `\(B\)` grow to infinity proportionally, i.e., with a fixed ratio. Also it assumes finite discrete contexts (i.e. finite and fixed number of states in our language). Since they consider the fluctuations of the remaining budget, therefore, it’s named as *adaptive* linear programming. Another variant which extends the **UCB-ALP** approach to an infinite time horizon is the **HATCH** [5].
 
-### Implementation
-TBA
-
 #### Reference
 - [1] Sutton, Richard S., and Andrew G. Barto. _Reinforcement learning: An introduction_. MIT press, 2018.
 - [2] Li, Lihong, et al. "A contextual-bandit approach to personalized news article recommendation." _Proceedings of the 19th international conference on World wide web_. 2010.
