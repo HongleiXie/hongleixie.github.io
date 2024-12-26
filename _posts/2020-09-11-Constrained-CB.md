@@ -2,6 +2,7 @@
 layout: post
 title: "Constrained Contextual Bandits for Personalized Recommendation"
 date: 2020-09-11
+usemathjax: true
 ---
 <span class="dropcap">C</span>ontextual bandits (CB), unlike the full Reinforcement Learning problem in which there are environmental states, new states depend on previous actions, and rewards can be delayed over time,  _"contexts”_  under the CB context do not mean the environment that the agent continuously interacts with, but the tuple of *(user features, item features, environment)*. Additionally, the rewards will not be delayed –- immediately we would know the user’s response such as purchasing or clicks.
 <figure>
