@@ -26,7 +26,7 @@ model = AutoModelForCausalLM.from_pretrained(
     trust_remote_code=True,
 )
 ```
-> Note that if you receive a warning that the `flash-attention` package is not found. That's because flash attention requires certain types of GPU hardware to run. Since we are not using any GPU, you can ignore this warning
+*Note that if you receive a warning that the `flash-attention` package is not found. That's because flash attention requires certain types of GPU hardware to run. Since we are not using any GPU, you can ignore this warning*
 
 Now let's print the model to take a look at its architecture:
 ```
