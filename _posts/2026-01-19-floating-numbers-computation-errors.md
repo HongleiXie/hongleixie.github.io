@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Floating point computations errors"
+title:  "Floating Point Computations Errors"
 date:   2026-01-19
 ---
 
