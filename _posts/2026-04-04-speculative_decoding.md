@@ -19,8 +19,7 @@ For every step, the system follows a "guess-and-verify" loop:
 2.  **Verify:** The target model $M_p$ reviews all these guesses simultaneously in one parallel pass.
 3.  **Accept/Reject:** Each guess $x$ is accepted if it aligns with the target model’s distribution. Specifically:
     *   If the approximation probability $q(x)$ is less than or equal to the target probability $p(x)$, the token is **always accepted**.
-    *   If $q(x) > p(x)$, the token is **rejected** with a probability of $1 - \frac{p(x)}{q(x)}$.
-    *   In practice, this is implemented by sampling a uniform random variable $r∼U(0,1)$
+    *   If $q(x) > p(x)$, the token is **rejected** with a probability of $1 - \frac{p(x)}{q(x)}$. In practice, this is implemented by sampling a uniform random variable $r∼U(0,1)$ and accept the guess if $r>\frac{p(x)}{q(x)}$
 4.  **Correct:** If a token is rejected, the target model provides a "correction" token sampled from an **adjusted distribution**.
 
 ### A Technical Walkthrough: The Correction Step
@@ -44,8 +43,9 @@ If the guess `"is"` is rejected, the system must sample a new token from the adj
     *   "stock": $\max(0, 0.3 - 0.25) = \mathbf{0.05}$
     *   "girl": $\max(0, 0.2 - 0.15) = \mathbf{0.05}$
     *   "cherry": $\max(0, 0.1 - 0.1) = \mathbf{0}$
-2.  **Normalize:** These differences sum to $0.1$. This value is $1 - \beta$, where $\beta$ is the overall acceptance rate. We divide the differences by $0.1$ to create a valid distribution. The final adjusted probabilities:** "is" (0), **"stock" (0.5)**, **"girl" (0.5)**, "cherry" (0).
-3.  **Result:** The system will sample the replacement token from a 50/50 split between "stock" and "girl."
+2.  **Normalize:** These differences sum to $0.1$. This value is $1 - \beta$, where $\beta$ is the overall acceptance rate. We divide the differences by $0.1$ to create a valid distribution. 
+3.  **Final Adjusted Probabilities:** "is" (0), "stock" (0.5), "girl" (0.5), "cherry" (0)
+4.  **Result:** The system will sample the replacement token from a 50/50 split between "stock" and "girl."
 
 ### Why It Matters
 
