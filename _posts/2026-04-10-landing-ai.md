@@ -30,18 +30,14 @@ That lines up with my intuition from working on these pipelines. Invoices are vi
 
 There are real cases where the parse-once approach earns its complexity.
 
-The most obvious is when you genuinely do need to query the same document repeatedly. A contracts platform where legal teams search across thousands of agreements for specific clauses, or a compliance system that needs to re-examine historical documents every time regulations change — these are multi-query workloads where the economics flip. Parse once, query many actually means something.
-
-Audit and compliance cases matter too. When you need to show exactly which cell in which table a value came from — for a regulator, a legal dispute, an internal review — the bounding-box provenance that a parser gives you is hard to replicate from raw vision-LLM output. You could engineer something, but it's not natural.
-
-There's also the hybrid routing case. Once you have a parsed representation with per-field confidence scores, you can route the easy documents through a cheap fast path and escalate only the ambiguous ones to a more expensive model or a human reviewer. Without parsing, every document looks the same going in. You have no signal to route on.
+- The most obvious is when you genuinely do need to query the same document repeatedly. A contracts platform where legal teams search across thousands of agreements for specific clauses, or a compliance system that needs to re-examine historical documents every time regulations change — these are multi-query workloads where the economics flip. Parse once, query many actually means something.
+- Audit and compliance cases matter too. When you need to show exactly which cell in which table a value came from — for a regulator, a legal dispute, an internal review — the bounding-box provenance that a parser gives you is hard to replicate from raw vision-LLM output. You could engineer something, but it's not natural.
+- There's also the hybrid routing case. Once you have a parsed representation with per-field confidence scores, you can route the easy documents through a cheap fast path and escalate only the ambiguous ones to a more expensive model or a human reviewer. Without parsing, every document looks the same going in. You have no signal to route on.
 
 The through-line in all of these: they either involve querying documents multiple times, changing what you extract without re-processing originals, or needing operational control over what gets stored and verified. Batch extraction for a single downstream system hits none of those.
 
 ## My opinioned TL;DR
 
 If you're building a document platform with ongoing query workloads, their argument holds. If you're building a batch extraction pipeline that feeds structured data into a downstream system and then moves on, you're likely adding complexity without getting anything back.
-
 The question worth asking before you choose your approach isn't "which method is more accurate on DocVQA?" It's simpler than that: how many times are you actually going to read each document?
-
 If the answer is once, just use a vision-LLM directly.
